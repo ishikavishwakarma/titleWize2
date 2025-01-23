@@ -9,13 +9,13 @@ const Benefits = () => {
 
   return (
     <div
-      className="h-fit  min-h-screen w-full flex items-center justify-center px-4 py-8"
+      className="h-fit py-20  w-full flex items-center justify-center "
       ref={ref}
     >
-      <div className="benefits flex flex-col lg:flex-row w-full max-w-[1200px] h-auto lg:h-[80vh] overflow-hidden gap-8">
+      <div className="flex w-[60%] ">
         {/* Left Section */}
         <motion.div
-          className="side-1 w-full lg:w-[50%] flex items-center justify-center gap-6 flex-col"
+          className="side-1 w-full lg:w-[70%] flex items-center justify-center gap-6 flex-col"
           initial={{ x: "-100%", opacity: 0 }}
           animate={inView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5, ease: "easeOut" }}
@@ -47,13 +47,13 @@ const Benefits = () => {
           animate={inView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <div className="side2-right w-full lg:w-[65%] h-[80%] border-[1.9px] border-[#201B1B] flex flex-col items-center justify-center p-6 bg-white  shadow-sm">
+          <div className="side2-right w-full lg:w-[80%] h-[100%] border-[1.9px] border-[#201B1B] flex flex-col items-center justify-center p-6 bg-white  shadow-sm">
             <img
               src="254.png"
               className="w-16 h-16 lg:w-[18vw] lg:h-[18vh] object-contain"
               alt="Secure Investment"
             />
-            <h1 className="text-lg lg:text-4xl font-semibold text-start leading-relaxed mt-4">
+            <h1 className="text-lg lg:text-3xl font-semibold text-start leading-relaxed mt-4">
               Secure your investments. Eliminate the risk of disputed properties
               before committing capital.
             </h1>
