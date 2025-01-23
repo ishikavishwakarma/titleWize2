@@ -5,7 +5,7 @@ import '../css/Feature.css'
 
 const Feature = () => {
   return (
-    <div className='feature h-fit'>
+    <div className=''>
       <FeatureTop/>
       <FeatureBottom/>
     </div>  
