@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Home, ChevronDown, FileText, Download } from 'lucide-react';
+import { Home, ChevronDown, FileText, Download } from "lucide-react";
 
 function cn(...classes) {
-  return classes.filter(Boolean).join(' ');
+  return classes.filter(Boolean).join(" ");
 }
 
 const FeatureTop = () => {
@@ -58,43 +58,48 @@ const FeatureTop = () => {
   return (
     <div
       ref={ref}
-      className="feature-upper w-full  flex flex-col lg:flex-row items-center justify-between gap-6 px-20"
+      className="flex w-full h-[100vh]  items-center justify-evenly px-10 "
     >
       {/* Left Div */}
-      <div className=" lg:w-[25%] w-[50%] flex justify-center  h-fit ">
-        <div className=" w-full h-fit  border-[1.9px] border-gray-800 py-10 p-7 flex flex-col items-center text-start">
-          <h1 className="text-[6vw] lg:text-[2.3vw] tracking-tighter leading-tight font-semibold text-[#201B1B]">
+      <div className=" h-full w-[30%]  flex items-center justify-center ">
+        <div className=" w-[80%] border-2  border-black p-5">
+          <h1 className="text-3xl tracking-tighter leading-tight font-semibold text-[#201B1B]">
             Generate title flows instantly.
           </h1>
-          <h3 className="text-sm lg:text-lg mt-4 lg:mt-8">
-            Be it risk assessment for sanctioning secured loans or large-scale real estate projects,
-            generate title history of lands in seconds with Titlewize. Get detailed, accurate, and actionable information
-            of past transactions, mortgages, and ownership to help you make informed investments.
+          <h3 className="text-lg mt-6">
+            Be it risk assessment for sanctioning secured loans or large-scale
+            real estate projects, generate title history of lands in seconds
+            with Titlewize. Get detailed, accurate, and actionable information
+            of past transactions, mortgages, and ownership to help you make
+            informed investments.
           </h3>
         </div>
       </div>
 
       {/* Right Div with Animation */}
       <motion.div
-        className="feature-upper-right  w-[95%] lg:w-[75%] flex justify-center"
+        className=" flex items-center justify-center h-full w-[60%]     "
         initial={{ x: "100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 1.5, ease: "easeOut" ,delay:0.5}}
-              >
-        <div className="flex flex-col lg:flex-row w-full max-w-5xl bg-[#fafafa] border rounded-lg">
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+      >
+        <div className="flex   bg-[#fafafa]  overflow-hidden">
           {/* Left Sidebar */}
-          <div className="w-full lg:w-56 bg-[#fafafa] border-b lg:border-r border-gray-200">
-            <div className="p-4">
-              <button className="flex items-center mb-4">
-                <Home className="w-4 h-4 text-gray-500" />
-              </button>
+          <div className=" w-44 bg-[#fafafa] border-r border-gray-200">
+            <button className="flex items-center p-5">
+              <Home className="w-4 h-4 text-gray-500" />
+            </button>
+            <div className="">
               <div className="space-y-1">
-                <div className="bg-gray-200 px-4 py-2 text-sm rounded">New Titleflow</div>
-                <button className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
+                <div className="bg-gray-200 relative h-8 flex items-center px-4 text-sm rounded">
+                  <div className="absolute h-full w-[2px] bg-red-500 left-0"></div>
+                  New Titleflow
+                </div>
+                <button className="w-full  justify-between h-8 flex items-center px-4 text-sm text-gray-700 hover:bg-gray-100 rounded">
                   History
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                <button className="w-full flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
+                <button className="w-full  justify-between h-8 flex items-center px-4 text-sm text-gray-700 hover:bg-gray-100 rounded">
                   Saved
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -103,60 +108,83 @@ const FeatureTop = () => {
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 p-6">
-            <div className="flex items-center justify-between mb-6">
-              <h1 className="text-lg lg:text-xl font-semibold">
-                Title<span className="text-red-500">Wize</span>
-              </h1>
+          <div className="flex-1 p-5 bg-white">
+            <div className="flex items-center justify-between mb-2">
+              <img className="w-20 pl-2" src="/Titlewize_logo.png" alt="" />
             </div>
 
             {/* Progress Steps */}
-            <div className="flex items-center mb-8 text-sm flex-wrap">
-              <span className="px-4 py-1 bg-gray-100 rounded text-gray-600 mb-2 lg:mb-0">
+            <div className="flex items-center h-8  mb-4 text-sm flex-wrap">
+              <span className=" text-black rounded  font-semibold  px-2 py-1 text-xs capitalize ">
                 Property details
               </span>
               <span className="mx-2 text-gray-400">→</span>
-              <span className="px-4 py-1 bg-gray-100 rounded text-gray-600 mb-2 lg:mb-0">
+              <span className=" text-black rounded  font-semibold  px-2 py-1 text-xs capitalize ">
                 Upload documents
               </span>
               <span className="mx-2 text-gray-400">→</span>
-              <span className="px-4 py-1 bg-black text-white rounded">Generate Titleflow</span>
+              <span className=" bg-black text-white font-semibold px-2 py-1 text-xs capitalize rounded">
+                Generate Titleflow
+              </span>
             </div>
 
             {/* View Options */}
-            <div className="flex gap-4 mb-6 flex-wrap">
-              <button className="px-4 py-1 bg-red-500 text-white rounded-full text-sm">
+            <div className="flex gap-4 mb-6 flex-wrap  pl-2 ">
+              <div className="w-fit h-8 p-1  border rounded-full flex items-center justify-center">
+
+              <button className="px-4 py-1 bg-red-500 text-white rounded-full text-xs">
                 Brief
               </button>
-              <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-sm">
+              <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-xs">
                 Timeline
               </button>
-              <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-sm">
+              <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-xs">
                 Detailed
               </button>
+              </div>
             </div>
 
             {/* Table */}
-            <div className="bg-white rounded-lg shadow-sm overflow-auto">
-              <table className="w-full text-sm">
+            <div className="bg-white rounded-lg scale-90 shadow-sm overflow-auto">
+              <table className="w-full text-sm border">
                 <thead>
-                  <tr className="border-b">
-                    <th className="text-left p-4 font-medium text-gray-600">Date</th>
-                    <th className="text-left p-4 font-medium text-gray-600">First Party</th>
-                    <th className="text-left p-4 font-medium text-gray-600">Second Party</th>
-                    <th className="text-left p-4 font-medium text-gray-600">Nature of Transaction</th>
+                  <tr className="border-b bg-gray-100">
+                    <th className=" p-2 font-semibold text-center text-black">
+                      Date
+                    </th>
+                    <th className=" p-2 font-semibold text-center text-black">
+                      First Party
+                    </th>
+                    <th className=" p-2 font-semibold text-center text-black">
+                      Second Party
+                    </th>
+                    <th className=" p-2 font-semibold text-center text-black">
+                      Nature of Transaction
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {transactions.map((transaction, index) => (
-                    <tr key={index} className={cn("border-b", index === transactions.length - 1 && "border-b-0")}>
-                      <td className="p-4">{transaction.date}</td>
-                      <td className="p-4">{transaction.firstParty}</td>
-                      <td className="p-4">{transaction.secondParty}</td>
-                      <td className="p-4">
-                        <div className="flex flex-col">
+                    <tr
+                      key={index}
+                      className={cn(
+                        "",
+                        index === transactions.length - 1 && "border-b-0"
+                      )}
+                    >
+                      <td className="p-2 text-center">{transaction.date}</td>
+                      <td className="p-2 text-center">
+                        {transaction.firstParty}
+                      </td>
+                      <td className="p-2 text-center">
+                        {transaction.secondParty}
+                      </td>
+                      <td className="p-2 text-center">
+                        <div className="flex flex-col text-center">
                           <span>{transaction.nature}</span>
-                          <span className="text-xs text-gray-500">{transaction.reference}</span>
+                          <span className="text-xs text-gray-500">
+                            {transaction.reference}
+                          </span>
                         </div>
                       </td>
                     </tr>
