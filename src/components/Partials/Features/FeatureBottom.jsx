@@ -7,9 +7,9 @@ const FeatureBottom = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0 });
 
   return (
-    <div className="flex px-28 justify-evenly ">
+    <div className="flex flex-col md:flex-row px-5 md:px-28 justify-evenly ">
       {/* Left Section */}
-      <div className="w-[40%]   flex flex-col items-center justify-center ">
+      <div className="md:w-[40%] w-full   flex flex-col items-center justify-center ">
         <div className="p-5 border-2 border-black flex flex-col items-center justify-center ">
           <p className="text-3xl font-bold">
             Convert title flows into flow charts for easier understanding.
@@ -34,9 +34,9 @@ const FeatureBottom = () => {
       </div>
 
       {/* Right Section */}
-      <div className="w-[55%]    flex flex-col items-end justify-between">
+      <div className="md:w-[55%] w-full   flex flex-col md:items-end justify-between">
         {/* Table Section */}
-        <div className="part-1 w-[80%] p-6 border-[1.9px] border-gray-800 ">
+        <div className="part-1 w-full md:w-[80%] p-6 border-[1.9px] border-gray-800 ">
           <div className="bg-white rounded-lg overflow-hidden">
             <table className="w-full text-left">
               <thead className="bg-gray-100">
@@ -96,7 +96,7 @@ const FeatureBottom = () => {
         </div>
 
         {/* Notification Section */}
-        <div className="part-2 w-[80%] p-6 bg-white border-[1.9px] border-gray-800 ">
+        <div className="part-2 w-full md:w-[80%] p-6 bg-white border-[1.9px] border-gray-800 ">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
             Get notified of any issues in the title flow.
           </h2>
