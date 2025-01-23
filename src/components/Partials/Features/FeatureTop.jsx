@@ -73,7 +73,6 @@ const FeatureTop = () => {
             </h3>
           </div>
         </div>
-
         {/* Right Div with Animation */}
         <motion.div
           className=" flex items-center justify-center h-full w-[65%]      "
