@@ -29,7 +29,7 @@ const Partners = () => {
           <p className="text-sm sm:text-base text-gray-900">
             Want to see the product in action?
           </p>
-          <button className="px-4 py-2 border border-gray-200 rounded text-sm sm:text-base text-gray-900 hover:bg-gray-50 transition-colors">
+          <button className="px-4 py-2 border border-gray-600 rounded text-sm sm:text-base text-gray-900 hover:bg-gray-900 hover:text-white transition-colors duration-500">
             Book a demo
           </button>
         </div>

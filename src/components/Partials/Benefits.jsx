@@ -15,26 +15,26 @@ const Benefits = () => {
       <div className="flex w-[60%] ">
         {/* Left Section */}
         <motion.div
-          className="side-1 w-full lg:w-[70%] flex items-center justify-center gap-6 flex-col"
+          className="side-1 w-full lg:w-[70%] flex items-center justify-center gap-10 flex-col"
           initial={{ x: "-100%", opacity: 0 }}
           animate={inView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <div className="top1 w-full lg:w-[80%] border-[1.9px] border-[#201B1B] flex flex-col items-center justify-center p-8 gap-4 bg-white  shadow-sm">
+          <div className="top1 w-full lg:w-[80%] border-[1.9px] border-[#201B1B] flex flex-col items-center justify-center p-4  gap-4 bg-white  shadow-sm">
              <LoopingAnimatedButton/>
             <h1 className="text-lg lg:text-2xl font-semibold text-start leading-relaxed">
               Save up to 2.5x in legal costs by transforming to automation.  <br />Do
               more with less.
             </h1>
           </div>
-          <div className="top1 w-full lg:w-[80%] border-[1.9px] border-[#201B1B] flex items-center justify-between p-6 bg-white  shadow-sm">
+          <div className="top1 w-full lg:w-[80%] border-[1.9px] border-[#201B1B] flex items-center justify-between p-4 bg-white  shadow-sm">
             <h1 className="text-lg lg:text-2xl font-semibold w-full lg:w-[55%] text-start leading-relaxed">
               Save up to 10x spent on framing title flows. Close deals lightning
               fast.
             </h1>
             <img
               src="graph.avif"
-              className="w-[50%] lg:w-[40%] object-contain"
+              className="w-[40%] lg:w-[30%] object-contain"
               alt="Graph Illustration"
             />
           </div>
