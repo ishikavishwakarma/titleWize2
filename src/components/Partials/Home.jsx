@@ -56,9 +56,9 @@ const Home = () => {
   };
 
   return (
-    <div className="home w-full  relative h-[100vh] flex items-center justify-center  flex-col gap-3">
+    <div className="home w-screen  relative  h-[80vh] xl:h-[100vh] flex items-center justify-center  flex-col gap-3">
       <motion.span
-        className="tag-1 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-[10%] left-[16%] text-xl"
+        className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute lg:top-[10%] xl:top-[10%] lg:left-[15%] xl:left-[16%] text-xl"
         initial={{ opacity: 0.2 }} // Initially hidden
         animate={{ opacity: 1 }} // Dynamic opacity based on state
         transition={{ duration: 1, delay: 12 }}
@@ -145,7 +145,7 @@ const Home = () => {
           ease: "easeInOut", // Smooth easing
           times: [0, 0.1, 0.9, 1], // Control when each keyframe happens
         }}
-        className="union-5 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[49.2%] left-[58%]"
+        className="union-5 w-[5px] h-[5px] bg-red-500 z-10 absolute lg:top-[53.5%] xl:top-[49.2%] left-[58%]"
       />
 
       <motion.div
@@ -164,7 +164,7 @@ const Home = () => {
           transition: { duration: 1 }, // Make the exit smoother
         }}
         style={{ display: "block" }} // Force display block initially
-        className="union-3 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[42%] right-[22.6%] mb-5"
+        className="union-3 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[42%]  right-[22.6%] mb-5"
       />
       <motion.div
         initial={{ y: "100%", opacity: 1, rotate: 45 }} // Start below the visible area with opacity 0
@@ -240,15 +240,15 @@ const Home = () => {
         }}
         className="union-1 w-[5px] h-[5px] bg-red-500 z-10  absolute top-[34.5%] left-[26.6%] mb-5"
       />
-      <div className="absolute top-[25.3%] left-[48.7%] z-0 w-[9%] rotate-90 h-0 border-t-2 border-double  border-gray-100" />
-      <div className="absolute top-[51%] left-[58.1%] z-1 z-0 h-[27.3%]  w-0 border-r-2 border-double  border-gray-100" />
-      <div className="absolute top-[51%] left-[32.1%] z-1 z-0 h-[36.6%]  w-0 border-r-2 border-double  border-gray-100" />
-      <div className="absolute top-[51%] right-[21.2%] z-1 z-0 h-[33.3%]  w-[7.7%] border-l-2 border-b-2 border-double  border-gray-100" />
-      <div className="absolute top-[27.4%] z-1 right-[14%] w-[8.5%] h-[15%] border-b-2 border-r-2  border-double border-gray-100" />
-      <div className="absolute top-[13%] z-1 left-[19.7%] w-[7.1%] h-[22%] border-t-2 border-r-2  border-double border-gray-100" />
-      <div className="absolute top-[51%] z-1 left-[10.33%] w-[14.5%] h-[22%] border-b-2 border-r-2  border-double border-gray-100" />
+      <div className="absolute top-[15.7%] left-[53.1%] z-0 h-[140px]  w-0 border-r-2 border-double  border-grey-100" />
+      <div className="absolute top-[51%] left-[58.1%] z-1 z-0 h-[200px]  w-0 border-r-2 border-double  border-gray-100" />
+      <div className="absolute top-[51%] left-[32.1%] z-1 z-0 h-[267px]  w-0 border-r-2 border-double  border-gray-100" />
+      <div className="absolute top-[51%] right-[21.2%] z-1 z-0 h-[245px]  w-[118px] border-l-2 border-b-2 border-double  border-gray-100" />
+      <div className="absolute top-[27.4%] z-1 right-[14%] w-[130px] h-[110px] border-b-2 border-r-2  border-double border-gray-100" />
+      <div className="absolute top-[13%] z-1 left-[19.7%] w-[110px] h-[160px] border-t-2 border-r-2  border-double border-gray-100" />
+      <div className="absolute top-[51%] z-1 left-[10.33%] w-[224px] h-[161px] border-b-2 border-r-2  border-double border-gray-100" />
       <div className="home-center absolute bg-white  z-20 top-[35%] text-[5vh]  font-bold border-dashed border-2 border-gray-600 h-[16vh] lg:w-[55vw] xl:w-[55vw] xxl:w-[75vw]  flex items-center justify-center text-center p-2 ">
-        <h1 className=" text-2xl xl:text-4xl">
+        <h1 className=" text-2xl  xl:text-4xl">
           Generate title flows, compare revenue records, check encumbrances in{" "}
           <span className="bg-[#dd9798]">seconds.</span>
         </h1>
@@ -256,7 +256,7 @@ const Home = () => {
 
       <Link
         href="/request-access"
-        className="home-btn px-4 py-2 mt-20 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
+        className="home-btn px-4 py-2 mt-32 xl:mt-20 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
       >
         Request Access
       </Link>

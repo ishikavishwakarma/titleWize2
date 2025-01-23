@@ -58,11 +58,11 @@ const FeatureTop = () => {
   return (
     <div
       ref={ref}
-      className="flex w-full h-[100vh]  items-center justify-evenly px-10 "
+      className="flex w-full md:h-[100vh] flex-col md:flex-row items-center justify-evenly px-10 "
     >
       {/* Left Div */}
-      <div className=" h-full w-[30%]  flex items-center justify-center ">
-        <div className=" w-[80%] border-2  border-black p-5">
+      <div className=" h-full w-full md:w-[30%] flex-col md:flex-row flex items-center justify-center ">
+        <div className=" md:w-[80%] border-2  border-black p-5">
           <h1 className="text-3xl tracking-tighter leading-tight font-semibold text-[#201B1B]">
             Generate title flows instantly.
           </h1>
@@ -78,14 +78,14 @@ const FeatureTop = () => {
 
       {/* Right Div with Animation */}
       <motion.div
-        className=" flex items-center justify-center h-full w-[60%]     "
+        className=" flex  items-center justify-center h-full md:w-[60%]     "
         initial={{ x: "100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
       >
-        <div className="flex   bg-[#fafafa]  overflow-hidden">
+        <div className="flex flex-col md:flex-row   bg-[#fafafa]  overflow-hidden">
           {/* Left Sidebar */}
-          <div className=" w-44 bg-[#fafafa] border-r border-gray-200">
+          <div className=" md:w-44 bg-[#fafafa] border-r border-gray-200">
             <button className="flex items-center p-5">
               <Home className="w-4 h-4 text-gray-500" />
             </button>
@@ -110,7 +110,7 @@ const FeatureTop = () => {
           {/* Main Content */}
           <div className="flex-1 p-5 bg-white">
             <div className="flex items-center justify-between mb-2">
-              <img className="w-20 pl-2" src="/Titlewize_logo.png" alt="" />
+              <img className="md:w-20 w-full md:pl-2" src="/Titlewize_logo.png" alt="" />
             </div>
 
             {/* Progress Steps */}
