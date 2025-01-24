@@ -12,7 +12,7 @@ const Benefits = () => {
       className="h-fit py-20  w-full flex items-center justify-center "
       ref={ref}
     >
-      <div className="flex md:w-[60%] ">
+      <div className="flex w-[60%] ">
         {/* Left Section */}
         <motion.div
           className="side-1 w-full lg:w-[70%] flex items-center justify-center gap-10 flex-col"

@@ -18,11 +18,13 @@ const Partners = () => {
         <h1 className="text-[20px] sm:text-[24px] font-bold text-gray-900 leading-[1.3] max-w-[800px] text-center">
           Revolutionize how you assess risks for your real estate deals.
         </h1>
-
+      
         <div className="mt-6">
+          <a href="https://forms.gle/aieChuaKTCfeBsDG9">
           <button className="px-6 py-2.5 bg-[#EF4444] text-white rounded text-base font-medium hover:bg-red-600 transition-colors">
             Request Access
           </button>
+          </a>
         </div>
 
         <div className="mt-12 sm:mt-16 flex items-center gap-3">

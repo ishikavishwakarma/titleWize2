@@ -254,14 +254,14 @@ const Home = () => {
         </h1>
       </div>
 
-      <Link
-        href="/request-access"
-        className="home-btn px-4 py-2 mt-32 xl:mt-20 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
-      >
-        Request Access
-      </Link>
-    </div>
-  );
+            <a
+                href="https://forms.gle/aieChuaKTCfeBsDG9"
+                className="home-btn px-4 py-2 mt-24 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
+            >
+                Request Access
+            </a>
+        </div>
+    );
 };
 
 export default Home;
