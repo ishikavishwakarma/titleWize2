@@ -5,55 +5,55 @@ import "../css/Home.css";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Home = () => {
-  const dotVariants = {
-    animate: (i) => ({
-      x: [
-        0,
-        getStraightPoint(i).x,
-        getTurnPoint(i).x,
-        getStraightPoint(i).x,
-        0,
-      ],
-      y: [
-        0,
-        getStraightPoint(i).y,
-        getTurnPoint(i).y,
-        getStraightPoint(i).y,
-        0,
-      ],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        repeatType: "loop",
-      },
-    }),
-  };
+  // const dotVariants = {
+  //   animate: (i) => ({
+  //     x: [
+  //       0,
+  //       getStraightPoint(i).x,
+  //       getTurnPoint(i).x,
+  //       getStraightPoint(i).x,
+  //       0,
+  //     ],
+  //     y: [
+  //       0,
+  //       getStraightPoint(i).y,
+  //       getTurnPoint(i).y,
+  //       getStraightPoint(i).y,
+  //       0,
+  //     ],
+  //     transition: {
+  //       duration: 4,
+  //       repeat: Infinity,
+  //       repeatType: "loop",
+  //     },
+  //   }),
+  // };
 
   // Distance configuration for each dot
   const straightDistances = [200, 320, 120, 120]; // Straight movement distances
   const turnDistances = [320, 120, 310, 80]; // Turning movement distances
 
   // Get straight movement point
-  const getStraightPoint = (index) => {
-    const straightPositions = [
-      { x: 0, y: -straightDistances[index] }, // Top
-      { x: straightDistances[index], y: 0 }, // Right
-      { x: 0, y: straightDistances[index] }, // Bottom
-      { x: -straightDistances[index], y: 0 }, // Left
-    ];
-    return straightPositions[index];
-  };
+  // const getStraightPoint = (index) => {
+  //   const straightPositions = [
+  //     { x: 0, y: -straightDistances[index] }, // Top
+  //     { x: straightDistances[index], y: 0 }, // Right
+  //     { x: 0, y: straightDistances[index] }, // Bottom
+  //     { x: -straightDistances[index], y: 0 }, // Left
+  //   ];
+  //   return straightPositions[index];
+  // };
 
   // Get turning movement point
-  const getTurnPoint = (index) => {
-    const turnPositions = [
-      { x: -turnDistances[index], y: -straightDistances[index] }, // Top-left
-      { x: straightDistances[index], y: -turnDistances[index] }, // Top-right
-      { x: turnDistances[index], y: straightDistances[index] }, // Bottom-right
-      { x: -straightDistances[index], y: turnDistances[index] }, // Bottom-left
-    ];
-    return turnPositions[index];
-  };
+  // const getTurnPoint = (index) => {
+  //   const turnPositions = [
+  //     { x: -turnDistances[index], y: -straightDistances[index] }, // Top-left
+  //     { x: straightDistances[index], y: -turnDistances[index] }, // Top-right
+  //     { x: turnDistances[index], y: straightDistances[index] }, // Bottom-right
+  //     { x: -straightDistances[index], y: turnDistances[index] }, // Bottom-left
+  //   ];
+  //   return turnPositions[index];
+  // };
 
   return (
     <div className="home w-screen  relative  h-[80vh] xl:h-[100vh] flex items-center justify-center  flex-col gap-3">
@@ -132,7 +132,7 @@ const Home = () => {
           delay: 5, // Delay before starting
           times: [0, 0.1, 0.9, 1], // Control when each keyframe happens
         }}
-        className="union-2 w-[5px] h-[5px] bg-red-500 z-10  absolute bottom-[62%] left-[53%] mb-5"
+        className="union-2 w-[5px] h-[5px] bg-blue-500 z-10  absolute bottom-[61%] xl:bottom-[62%] left-[53%] mb-5"
       />
       <motion.div
         initial={{ y: "100%", opacity: 1, rotate: 45 }} // Start below the visible area with opacity 0
@@ -145,7 +145,7 @@ const Home = () => {
           ease: "easeInOut", // Smooth easing
           times: [0, 0.1, 0.9, 1], // Control when each keyframe happens
         }}
-        className="union-5 w-[5px] h-[5px] bg-red-500 z-10 absolute lg:top-[53.5%] xl:top-[49.2%] left-[58%]"
+        className="union-5 w-[5px] h-[5px] bg-red-500 z-10 absolute lg:top-[53%] xl:top-[49.2%] left-[58%]"
       />
 
       <motion.div
@@ -164,7 +164,7 @@ const Home = () => {
           transition: { duration: 1 }, // Make the exit smoother
         }}
         style={{ display: "block" }} // Force display block initially
-        className="union-3 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[42%]  right-[22.6%] mb-5"
+        className="union-3 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[45.5%] xl:top-[42%]  right-[22.6%] mb-5"
       />
       <motion.div
         initial={{ y: "100%", opacity: 1, rotate: 45 }} // Start below the visible area with opacity 0
@@ -178,7 +178,7 @@ const Home = () => {
           delay: 5, // Delay before the animation starts
           times: [0, 0.1, 0.9, 1], // Control when each keyframe happens
         }}
-        className="union-2 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[49.5%] left-[32%] mb-5"
+        className="union-2 w-[5px] h-[5px] bg-yellow-500 z-10 absolute top-[52.9%] xl:top-[49.5%] left-[34.9%] xl:left-[32%] mb-5"
       />
       <motion.div
         initial={{ x: "100%", y: "100%", opacity: 1, rotate: 45 }} // Start with initial position and rotation
@@ -192,7 +192,7 @@ const Home = () => {
           ease: "easeInOut", // Smooth movement
           delay: 10,
         }}
-        className="union-4 w-[5px] h-[5px] bg-red-500 z-10 absolute bottom-[47.2%] right-[29%] mb-5"
+        className="union-4 w-[5px] h-[5px] bg-red-500 z-10 absolute lg:bottom-[43%] xl:bottom-[47.2%] right-[29%] mb-5"
       />
 
       <motion.div
@@ -218,7 +218,7 @@ const Home = () => {
           ease: "easeInOut", // Smooth movement
           delay: 10,
         }}
-        className="union-7 w-[5px] h-[5px] bg-red-500 z-10  absolute top-[49.5%] left-[24.3%] mb-5"
+        className="union-7 w-[5px] h-[5px] bg-green-500 z-10  absolute top-[52.8%] xl:top-[49.5%] left-[26%] xl:left-[24.3%] mb-5"
       />
 
       <motion.div
@@ -240,16 +240,17 @@ const Home = () => {
         }}
         className="union-1 w-[5px] h-[5px] bg-red-500 z-10  absolute top-[34.5%] left-[26.6%] mb-5"
       />
-      <div className="absolute top-[15.7%] left-[53.1%] z-0 h-[140px]  w-0 border-r-2 border-double  border-grey-100" />
-      <div className="absolute top-[51%] left-[58.1%] z-1 z-0 h-[200px]  w-0 border-r-2 border-double  border-gray-100" />
-      <div className="absolute top-[51%] left-[32.1%] z-1 z-0 h-[267px]  w-0 border-r-2 border-double  border-gray-100" />
-      <div className="absolute top-[51%] right-[21.2%] z-1 z-0 h-[245px]  w-[118px] border-l-2 border-b-2 border-double  border-gray-100" />
-      <div className="absolute top-[27.4%] z-1 right-[14%] w-[130px] h-[110px] border-b-2 border-r-2  border-double border-gray-100" />
-      <div className="absolute top-[13%] z-1 left-[19.7%] w-[110px] h-[160px] border-t-2 border-r-2  border-double border-gray-100" />
-      <div className="absolute top-[51%] z-1 left-[10.33%] w-[224px] h-[161px] border-b-2 border-r-2  border-double border-gray-100" />
-      <div className="home-center absolute bg-white  z-20 top-[35%] text-[5vh]  font-bold border-dashed border-2 border-gray-600 h-[16vh] lg:w-[55vw] xl:w-[55vw] xxl:w-[75vw]  flex items-center justify-center text-center p-2 ">
-        <h1 className=" text-2xl  xl:text-4xl">
-          Generate title flows, compare revenue records, check encumbrances in{" "}
+      <div className="absolute top-[11%] xl:top-[15.7%] left-[53.1%] z-0 h-[140px]  w-0 border-r-2 border-double  border-gray-100" />
+      <div className="absolute top-[54%] xl:top-[51%] left-[58.1%] z-1 z-0 h-[200px]  w-0 border-r-2 border-double  border-gray-100" />
+      <div className="absolute top-[54%] xl:top-[51%] left-[35.1%] xl:left-[32.1%] z-1 z-0 h-[267px]  w-0 border-r-2 border-double  border-gray-800" />
+      <div className="absolute top-[55%] xl:top-[51%] right-[17.29%] xl:right-[21.2%] z-1 z-0 h-[245px]  w-[118px] border-l-2 border-b-2 border-double  border-gray-100" />
+      <div className="absolute top-[27.4%] z-1 right-[9.8%] xl:right-[14%] w-[130px] h-[110px] border-b-2 border-r-2  border-double border-gray-100" />
+      <div className="absolute top-[8%] xl:top-[13%] z-1 left-[19.7%] w-[110px] h-[160px] border-t-2 border-r-2  border-double border-gray-100" />
+      <div className="absolute top-[55%] xl:top-[51%] z-1 left-[5%] xl:left-[10.33%] w-[224px] h-[161px] border-b-2 border-r-2  border-double border-gray-100" />
+      
+      <div className="home-center absolute   z-20 top-[35%] text-[5vh]  font-bold border-dashed border-2 border-gray-600 h-[16vh] lg:w-[55vw] xl:w-[55vw] xxl:w-[75vw]  flex items-center justify-center text-center p-2 ">
+        <h1 className=" text-[20px]  xl:text-3xl">
+          Generate title flows, compare revenue records, <br /> check encumbrances in{" "}
           <span className="bg-[#dd9798]">seconds.</span>
         </h1>
       </div>
