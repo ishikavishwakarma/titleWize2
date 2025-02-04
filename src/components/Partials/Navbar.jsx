@@ -106,12 +106,12 @@ export default function Navbar() {
         <a href="/login" className="text-gray-600 hover:text-gray-900">
           Login
         </a>
-        <Link
-          href="/request-access"
+        <a
+          href="https://forms.gle/aieChuaKTCfeBsDG9"
           className="nav-btn px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
         >
           Request Access
-        </Link>
+        </a>
       </div>
     </header>
   );
