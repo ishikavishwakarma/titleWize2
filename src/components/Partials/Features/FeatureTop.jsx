@@ -58,15 +58,15 @@ const FeatureTop = () => {
   return (
     <div
       ref={ref}
-      className="flex w-full md:h-[100vh] flex-col md:flex-row items-center justify-evenly px-10 "
+      className="flex lg:w-full w-full px-3 xl:w-[90%] md:h-fit gap-3 flex-col md:flex-row items-center justify-evenly lg:px-1 xl:px-10 "
     >
       {/* Left Div */}
-      <div className=" h-full w-full md:w-[30%] flex-col md:flex-row flex items-center justify-center ">
+      <div className=" h-full w-full md:w-[40%]  lg:w-[30%] flex-col md:flex-row flex items-center justify-center ">
         <div className=" md:w-[80%] border-2  border-black p-5">
-          <h1 className="text-3xl tracking-tighter leading-tight font-semibold text-[#201B1B]">
+          <h1 className="xl:text-3xl text-2xl lg:text-2xl tracking-tighter leading-tight font-semibold text-[#201B1B]">
             Generate title flows instantly.
           </h1>
-          <h3 className="text-lg mt-6">
+          <h3 className="text-base xl:text-lg mt-6">
             Be it risk assessment for sanctioning secured loans or large-scale
             real estate projects, generate title history of lands in seconds
             with Titlewize. Get detailed, accurate, and actionable information
@@ -78,7 +78,7 @@ const FeatureTop = () => {
 
       {/* Right Div with Animation */}
       <motion.div
-        className=" flex  items-center justify-center h-full md:w-[60%]     "
+        className=" flex w-full items-center justify-center h-full md:w-[60%] lg:w-[50%] xl:w-[60%]     "
         initial={{ x: "100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
@@ -91,11 +91,11 @@ const FeatureTop = () => {
             </button>
             <div className="">
               <div className="space-y-1">
-                <div className="bg-gray-200 relative h-8 flex items-center px-4 text-sm rounded">
+                <div className="bg-gray-200 relative h-8 flex items-center xl:px-4 text-sm rounded">
                   <div className="absolute h-full w-[2px] bg-red-500 left-0"></div>
                   New Titleflow
                 </div>
-                <button className="w-full  justify-between h-8 flex items-center px-4 text-sm text-gray-700 hover:bg-gray-100 rounded">
+                <button className="w-full  justify-between h-8 flex items-center md:px-4 text-sm text-gray-700 hover:bg-gray-100 rounded">
                   History
                   <ChevronDown className="w-4 h-4" />
                 </button>
@@ -108,7 +108,7 @@ const FeatureTop = () => {
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 p-5 bg-white">
+          <div className="flex-1 py-5 px-2 p-2 lg:p-5 bg-white">
             <div className="flex items-center justify-between mb-2">
               <img className="md:w-20 w-full md:pl-2" src="/Titlewize_logo.png" alt="" />
             </div>
@@ -145,7 +145,7 @@ const FeatureTop = () => {
             </div>
 
             {/* Table */}
-            <div className="bg-white rounded-lg scale-90 shadow-sm overflow-auto">
+            <div className="bg-white  rounded-lg scale-90 shadow-sm overflow-auto">
               <table className="w-full text-sm border">
                 <thead>
                   <tr className="border-b bg-gray-100">
