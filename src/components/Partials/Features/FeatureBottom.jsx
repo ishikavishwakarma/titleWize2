@@ -1,5 +1,5 @@
 import React from "react";
-import { AlertCircle } from "lucide-react";
+import { IoIosAlert } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 
@@ -108,12 +108,12 @@ const FeatureBottom = () => {
           <div ref={ref} className="mt-6 space-y-4">
             {/* Card 1 */}
             <motion.div
-              className="card flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-300"
+              className="card flex  items-center gap-3 p-4 bg-[#EF363626] rounded-lg border border-[#B02527]"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             >
-              <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+              <IoIosAlert className="w-6 h-6 text-red-500 flex-shrink-0" />
               <p className="text-sm leading-relaxed text-gray-900">
                 The EC does not reflect Sale Deed bearing Document No.
                 KRI-1-005177-2020-21.
@@ -121,12 +121,12 @@ const FeatureBottom = () => {
             </motion.div>
             {/* Card 2 */}
             <motion.div
-              className="card flex items-start gap-3 p-4 bg-red-50 rounded-lg border border-red-300"
+              className="card flex items-center gap-3 p-4 bg-[#EF363626] rounded-lg border border-[#B02527]"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
-              <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                            <IoIosAlert className="w-6 h-6 text-red-500 flex-shrink-0" />
               <p className="text-sm leading-relaxed text-gray-900">
                 There's a break in the chain of title between Paul D'Souza
                 (owner vide Sale Deed bearing Document No. MDP-1-010408-2011-12)

@@ -21,11 +21,13 @@ const getResponsiveValues = (width, xValuesMap, yValuesMap) => {
   if (width >= 768) return { xValues: xValuesMap.md, yValues: yValuesMap.md }; // md screens
   return { xValues: xValuesMap.sm, yValues: yValuesMap.sm }; // Default to sm screens
 };
+
 const getAnimation = (xValues, yValues, delay) => ({
   x: xValues,
   y: yValues,
   transition: { duration: 5, ease: "easeInOut", delay: delay },
 });
+
 const MovingDot = ({ initialPosition, delay, xValuesMap, yValuesMap, className }) => {
   const controls = useAnimation();
   const [animationValues, setAnimationValues] = useState(() =>
@@ -35,15 +37,16 @@ const MovingDot = ({ initialPosition, delay, xValuesMap, yValuesMap, className }
   useEffect(() => {
     const updateAnimation = () => {
       const newValues = getResponsiveValues(window.innerWidth, xValuesMap, yValuesMap);
-      setAnimationValues(newValues);
-      controls.start(getAnimation(newValues.xValues, newValues.yValues, delay));
+      setAnimationValues(newValues);  // Update the values based on current width
+      controls.start(getAnimation(newValues.xValues, newValues.yValues, delay)); // Animate the dot with updated values
     };
 
-    updateAnimation();
-    window.addEventListener("resize", updateAnimation);
-    
-    return () => window.removeEventListener("resize", updateAnimation);
-  }, [controls, delay, xValuesMap, yValuesMap]); // ✅ Prevents infinite re-renders
+    updateAnimation(); // Initial animation on mount
+
+    window.addEventListener("resize", updateAnimation); // Listen for window resize
+
+    return () => window.removeEventListener("resize", updateAnimation); // Cleanup
+  }, [controls, delay, xValuesMap, yValuesMap]);
 
   return (
     <motion.div
@@ -95,7 +98,7 @@ export default function MovingDotsContainer() {
       </motion.span>
 
       <motion.span
-        className="tag-4 border-[#575757] border-[0.1px] w-36 px-2 py-1.5 text-[#575757] absolute lg:-bottom-[234%] xl:-bottom-[235%] left-[102.7%] text-xl"
+        className="tag-4 border-[#575757] border-[0.1px] w-36 px-2 py-1.5 text-[#575757] absolute lg:-bottom-[234%] xl:-bottom-[225%] left-[102.7%] text-xl"
         initial={{ opacity: 0.2 }} // Initially hidden
         animate={{ opacity: 1 }} // Dynamic opacity based on state
         transition={{ duration: 1, delay: 12 }}
@@ -104,7 +107,7 @@ export default function MovingDotsContainer() {
       </motion.span>
 
       <motion.span
-        className="tag-5 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-[265%] left-[52%] xl:left-[56%] text-xl"
+        className="tag-5 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-[255%] left-[52%] xl:left-[56%] text-xl"
         initial={{ opacity: 0.2 }} // Initially hidden
         animate={{ opacity: 1 }} // Dynamic opacity based on state
         transition={{ duration: 1, delay: 2 }}
@@ -113,7 +116,7 @@ export default function MovingDotsContainer() {
       </motion.span>
 
       <motion.span
-        className="tag-6 border-[#575757] bg-white border-[0.1px] px-4 py-1.5 text-[#575757] absolute top-[330%] lg:right-[72%] xl:right-[75%] text-xl"
+        className="tag-6 border-[#575757] bg-white border-[0.1px] px-4 py-1.5 text-[#575757] absolute top-[280%] lg:right-[72%] xl:right-[75%] text-xl"
         initial={{ opacity: 0.2 }} // Initially hidden
         animate={{ opacity: 1 }} // Dynamic opacity based on state
         transition={{ duration: 1, delay: 7 }}
@@ -135,7 +138,7 @@ export default function MovingDotsContainer() {
         xValuesMap={{
           sm: ["0%"],md: ["0%"], lg: ["0%"], xl: ["0%"]
         }}
-        delay={5}
+        // delay={5}
         yValuesMap={{
           sm: ["100%", "-2590%", "100%"], md: ["100%", "-2590%", "100%"], lg: ["100%", "-2590%", "100%"], xl: ["100%", "-2590%", "100%"],
         }}
@@ -148,7 +151,7 @@ export default function MovingDotsContainer() {
           sm: ["0%"],md: ["0%"], lg: ["0%"], xl: ["0%"]
         }}
         yValuesMap={{
-          sm: ["100%", "4000%", "100%"], md: ["100%", "4000%", "100%"], lg: ["100%", "4000%", "100%"], xl: ["100%", "4000%", "100%"],
+          sm: ["100%", "4000%", "100%"], md: ["100%", "4000%", "100%"], lg: ["100%", "4000%", "100%"], xl: ["100%", "3750%", "100%"],
         }}
         // yValues={["100%", "4000%", "100%"]}
         className="union-3 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[89%] left-[64.8%]"
@@ -175,7 +178,7 @@ export default function MovingDotsContainer() {
         }}
         // delay={5}
         yValuesMap={{
-          sm: ["100%", "5500%", "100%"], md: ["100%", "5500%", "100%"], lg: ["100%", "5500%", "100%"], xl: ["100%", "5500%", "100%"],
+          sm: ["100%", "5500%", "100%"], md: ["100%", "5500%", "100%"], lg: ["100%", "5500%", "100%"], xl: ["100%", "4350%", "100%"],
         }}
         // yValues={["100%", "5500%", "100%"]}
         className="union-4 w-[5px] h-[5px] bg-red-500 z-10 absolute top-[89%] left-[16.9%] mb-5"
@@ -188,7 +191,7 @@ export default function MovingDotsContainer() {
         }}
         // xValues={["100%","100%","100%","2400%","2400%","100%","100%","100%"]}
         yValuesMap={{
-          sm: ["100%", "5300%", "5300%", "5300%", "100%"], md: ["100%", "5300%", "5300%", "5300%", "100%"], lg: ["100%", "5300%", "5300%", "5300%", "100%"], xl: ["100%", "5300%", "5300%", "5300%", "100%"],
+          sm: ["100%", "5300%", "5300%", "5300%", "100%"], md: ["100%", "5300%", "5300%", "5300%", "100%"], lg: ["100%", "5300%", "5300%", "5300%", "100%"], xl: ["100%", "5100%", "5100%", "5100%", "100%"],
         }}
         // yValues={["100%", "5300%", "5300%", "5300%", "100%"]}
         // delay={10}
@@ -232,9 +235,9 @@ export default function MovingDotsContainer() {
          
         </h1>
       <div className="absolute bottom-[100%] left-[57%] z-0 h-[110%]  w-0 border-r-2 border-solid  border-gray-100" />
-      <div className="absolute top-[100%] left-[65%] z-1 z-0 h-[165%]  w-0 border-r-2 border-solid  border-gray-100" />
-      <div className="absolute top-[100%] left-[17%] z-1 z-0 h-[230%]  w-0 border-r-2 border-solid  border-gray-100" />
-      <div className="absolute top-[100%]  left-[88.7%] z-1 z-0 h-[218%]  w-[14%] border-l-2 border-b-2 border-solid  border-gray-100" />
+      <div className="absolute top-[100%] left-[65%] z-1 z-0 h-[155%]  w-0 border-r-2 border-solid  border-gray-100" />
+      <div className="absolute top-[100%] left-[17%] z-1 z-0 h-[180%]  w-0 border-r-2 border-solid  border-gray-100" />
+      <div className="absolute top-[100%]  left-[88.7%] z-1 z-0 h-[210%]  w-[14%] border-l-2 border-b-2 border-solid  border-gray-100" />
       <div className="absolute bottom-[50%] z-1 left-[100%] w-[19%] h-[110%] border-b-2 border-r-2  border-solid border-gray-100" />
       <div className="absolute bottom-[100%] z-1 -left-[4.3%] w-[13%] h-[140%] border-t-2 border-r-2  border-solid border-gray-100" />
       <div className="absolute top-[100%] z-1 lg:right-[93%]  xl:right-[96.5%] md:right-[80%]  w-[27%] h-[113%] border-b-2 border-r-2  border-solid border-gray-100" />

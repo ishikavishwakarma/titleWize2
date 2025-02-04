@@ -17,7 +17,7 @@ const Main = () => {
       <Navbar />
       <Home />
       {/* <Home2 /> */}
-      <div id="feature-section">
+      <div id="feature-section" className='mt-20'>
         <Feature />
       </div>
       <div id="benefit-section">
