@@ -56,7 +56,7 @@ const MovingDot = ({
 export default function BallAnimation() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="home bg-white w-screen h-48 xl:mt-10 md:h-[70vh]  lg:h-[80vh] xl:h-[80vh] md:mt-10 lg:mt-0 flex items-center justify-center  flex-col gap-10">
+    <div className="home bg-white w-screen h-48 xl:mt-10 md:h-[70vh] lg:h-[80vh] xl:h-[80vh] mt-10 lg:mt-0 flex items-center justify-center  flex-col gap-10">
       <div className=" w-[70vw] relative border-none  z-30 top-0 md:top-8  text-[5vh] font-bold h-full md:h-[16vh] md:w-[65vw] lg:w-[47vw] xl:w-[55vw] xxl:w-[75vw] flex items-center justify-center text-center ">
         {/* <motion.span
           className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-[220%] xl:-left-[11%] lg:-left-[20%] -left-[14.5%] text-xl"
@@ -343,9 +343,9 @@ export default function BallAnimation() {
         </h1>
         <div className="absolute md:bottom-[85%] xl:bottom-[90%] right-[91.4%]  w-[7vw] md:w-[8.9vw] xl:w-[7vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
           {/* Box Borders */}
-          <div className="absolute w-[1px] z-10 h-full bg-gray-100  right-0"></div>
+          <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100  right-0"></div>
           <div className="w-full flex">
-            <div className="absolute w-full z-10 h-[1px] bg-gray-100 bottom-full"></div>
+            <div className="absolute hidden md:block w-full z-10 h-[1px] bg-gray-100 bottom-full"></div>
 
             <motion.span
               className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute right-full md:bottom-[87%] xl:bottom-[89%] text-xl"
@@ -359,7 +359,7 @@ export default function BallAnimation() {
 
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
+            className="absolute hidden md:block w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
             initial={{ bottom: "0%", right: "0%" }}
             animate={{
               bottom: ["0%", "100%", "100%"], // Moves down, stays, then moves up
@@ -377,9 +377,9 @@ export default function BallAnimation() {
         </div>
         <div className="absolute bottom-[50%] left-[99.6%]  w-[7vw] md:w-[8vw] lg:w-[8.9vw] xl:w-[10.6vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
           {/* Box Borders */}
-            <div className="absolute w-full z-10 h-[1px] bg-gray-100 top-full"></div>
+            <div className="absolute w-full hidden md:block z-10 h-[1px] bg-gray-100 top-full"></div>
           <div className="w-full flex">
-          <div className="absolute w-[1px] z-10 h-full bg-gray-100  right-0"></div>
+          <div className="absolute w-[1px] hidden md:block z-10 h-full bg-gray-100  right-0"></div>
             <motion.span
           className="tag-3 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-full md:left-[-10%] lg:left-[20%] xl:left-[50%] text-lg lg:text-xl "
           initial={{ opacity: 0.2 }} // Initially hidden
@@ -392,7 +392,7 @@ export default function BallAnimation() {
 
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[-60%] translate-y-[60%] bg-red-500 rotate-45"
+            className="absolute hidden md:block w-[5px] h-[5px]  z-20 translate-x-[-60%] translate-y-[60%] bg-red-500 rotate-45"
             initial={{ bottom: "0%", right: "0%" }}
             animate={{
               left: ["0%", "100%", "100%"], // Moves down, stays, then moves up
@@ -409,9 +409,9 @@ export default function BallAnimation() {
         </div>
         <div className="absolute lg:top-[85%] xl:top-[90%] lg:left-[95%] xl:left-[88.8%]  w-[7vw] md:w-[7vw] lg:w-[8.9vw] xl:w-[8vw] h-[50vh] md:h-[25vh] xl:h-[32vh]">
           {/* Box Borders */}
-          <div className="absolute w-[1px] z-10 h-full bg-gray-100  left-0"></div>
+          <div className="absolute w-[1px] hidden md:block z-10 h-full bg-red-100  left-0"></div>
           <div className="w-full flex">
-            <div className="absolute w-full z-10 h-[1px] bg-gray-100 top-full"></div>
+            <div className="absolute w-full hidden md:block z-10 h-[1px] bg-gray-100 top-full"></div>
           <motion.span
           className="tag-4 border-[#575757] border-[0.1px] w-36 px-2 py-1.5 left-full xl:top-[92%] top-[87%] text-[#575757] absolute text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
@@ -424,7 +424,7 @@ export default function BallAnimation() {
 
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[-50%] translate-y-[-50%] bg-red-500 rotate-45"
+            className="absolute hidden md:block w-[5px] h-[5px]  z-20 translate-x-[-50%] translate-y-[-50%] bg-red-500 rotate-45"
             initial={{ left: "0%", top: "0%" }}
             animate={{
               top: ["0%", "100%", "100%"], // Moves down, stays, then moves up
@@ -441,11 +441,11 @@ export default function BallAnimation() {
           />
         </div>
 
-        <div className="absolute  lg:bottom-[85%] xl:bottom-[90%] left-[57.1%] h-[50vh] md:h-[30vh] xl:h-[20vh] lg:h-[22vh]">
+        <div className="absolute hidden md:block lg:bottom-[85%] xl:bottom-[90%] left-[57.1%] h-[50vh] md:h-[30vh] xl:h-[20vh] lg:h-[22vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full flex">
-            <div className="absolute w-[1px] z-10 h-full bg-gray-100 right-0"></div>
+            <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100 right-0"></div>
             <motion.span
               className="tag-1 bg-white w-32 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-full -left-16 text-xl"
               initial={{ opacity: 0.2 }} // Initially hidden
@@ -457,7 +457,7 @@ export default function BallAnimation() {
           </div>
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
+            className="absolute hidden md:block  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
             initial={{ bottom: "0%", right: "0%" }}
             animate={{
               bottom: ["0%", "95%"],
@@ -471,11 +471,11 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute top-[80%] xl:top-[87%] left-[70%] xl:left-[65%] h-[50vh] md:h-[30vh] xl:h-[25vh] lg:h-[22vh]">
+        <div className="absolute hidden md:block top-[80%] xl:top-[87%] left-[70%] xl:left-[65%] h-[50vh] md:h-[30vh] xl:h-[25vh] lg:h-[22vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
-          <div className="w-full flex">
-            <div className="absolute w-[1px] z-10 h-full bg-gray-100 right-0"></div>
+          <div className="w-full hidden md:flex">
+            <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100 right-0"></div>
             <motion.span
           className="tag-5 border-[#575757] w-40 border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-full lg:-left-20 xl:-left-16 text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
@@ -487,7 +487,7 @@ export default function BallAnimation() {
           </div>
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
+            className="absolute hidden md:block  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
             initial={{ top: "0%", right: "0%" }}
             animate={{
               top: ["0%", "95%"],
@@ -500,11 +500,11 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute top-[80%] xl:top-[87%] left-[17%] h-[50vh] md:h-[28vh]  lg:h-[27vh]">
+        <div className="absolute hidden md:block top-[80%] xl:top-[87%] left-[17%] h-[50vh] md:h-[28vh]  lg:h-[27vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full flex">
-            <div className="absolute w-[1px] z-10 h-full bg-gray-100 right-0"></div>
+            <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100 right-0"></div>
             <motion.span
           className="tag-5 border-[#575757] w-28 border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-full -left-16 text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
@@ -516,7 +516,7 @@ export default function BallAnimation() {
           </div>
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
+            className="absolute hidden md:block  w-[5px] h-[5px]  z-20 translate-x-[40%] translate-y-[50%] bg-red-500 rotate-45"
             initial={{ top: "0%", right: "0%" }}
             animate={{
               top: ["0%", "95%"],
@@ -532,9 +532,9 @@ export default function BallAnimation() {
         </div>
         <div className="absolute lg:top-[82%] xl:top-[90%] lg:left-[-27%] xl:left-[-24%]  w-[7vw] md:w-[7vw] lg:w-[15vw] h-[50vh] md:h-[25vh] lg:h-[20vh]">
           {/* Box Borders */}
-          <div className="absolute w-[1px] z-10 h-full bg-gray-100  right-0"></div>
+          <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100  right-0"></div>
           <div className="w-full flex">
-            <div className="absolute w-full z-10 h-[1px] bg-gray-100 top-full"></div>
+            <div className="absolute hidden md:block w-full z-10 h-[1px] bg-gray-100 top-full"></div>
           <motion.span
           className="tag-4 border-[#575757] border-[0.1px] px-2 py-1.5 right-full top-[86%] text-[#575757] absolute text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
@@ -547,7 +547,7 @@ export default function BallAnimation() {
 
           {/* Animated Ball */}
           <motion.div
-            className="absolute  w-[5px] h-[5px]  z-20 translate-x-[50%] translate-y-[-50%] bg-red-500 rotate-45"
+            className="absolute hidden md:block w-[5px] h-[5px]  z-20 translate-x-[50%] translate-y-[-50%] bg-red-500 rotate-45"
             initial={{ right: "0%", top: "0%" }}
             animate={{
               top: ["0%", "100%", "100%"], // Moves down, stays, then moves up
