@@ -1,7 +1,10 @@
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-
+import { IoClose } from "react-icons/io5";
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="navbar flex items-center justify-between px-4 py-4 bg-white md:px-8 md:py-4">
@@ -13,8 +16,8 @@ export default function Navbar() {
           className="h-10 w-auto md:h-12"
         />
       </a>
- {/* Hamburger Button (Mobile) */}
- <button
+      {/* Hamburger Button (Mobile) */}
+      <button
         className="block md:hidden text-gray-600 focus:outline-none"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
@@ -60,10 +63,10 @@ export default function Navbar() {
           Partners
         </Link>
       </nav> */}
-<nav
+      <nav
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } md:flex md:items-center  items-center z-50 gap-10 md:gap-14 md:static fixed top-16 left-0 w-full md:w-fit bg-white shadow-md md:shadow-none md:bg-transparent text-lg`}
+        } md:flex md:items-center  items-center z-50 gap-10 md:gap-1 lg:gap-10 md:w-[45%] md:static fixed top-16 left-0 w-full lg:w-fit bg-white shadow-md md:shadow-none md:bg-transparent text-lg`}
       >
         <Link
           to="feature-section"
@@ -90,9 +93,12 @@ export default function Navbar() {
           Partners
         </Link>
         <div className="md:hidden border-t border-gray-200 mt-2 pt-2">
-          <a href="/login" className="block py-2 px-4 text-gray-600 hover:text-gray-900">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="block py-2 px-4 text-gray-600 hover:text-gray-900"
+          >
             Login
-          </a>
+          </button>
           <a
             href="/request-access"
             className="block py-2 px-4 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
@@ -103,9 +109,12 @@ export default function Navbar() {
       </nav>
       {/* Auth Buttons */}
       <div className="nav-login flex items-center space-x-4 md:space-x-5">
-        <a href="/login" className="text-gray-600 hover:text-gray-900">
+        <button
+          onClick={() => setIsOpen(true)}
+          className="text-gray-600 hover:text-gray-900"
+        >
           Login
-        </a>
+        </button>
         <a
           href="https://forms.gle/aieChuaKTCfeBsDG9"
           className="nav-btn px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
@@ -113,6 +122,53 @@ export default function Navbar() {
           Request Access
         </a>
       </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 flex z-50 items-center justify-center bg-black bg-opacity-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)} // Click outside to close
+          >
+            {/* Modal Content */}
+            <motion.div
+              className="relative bg-white   p-8 rounded-lg text-center max-w-md w-full shadow-xl border border-gray-300"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 50, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+            >
+              {/* Close Icon */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
+              >
+                <IoClose size={24} />
+              </button>
+
+              <h2 className="text-2xl font-bold text-gray-800">
+                We are currently in closed beta.
+              </h2>
+              <p className="text-lg text-gray-700 mt-2">
+                We would be thrilled to have you as an early user!
+              </p>
+
+              {/* Request Access Button */}
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScWXBOILpMFZzCas7jng9_pjLztmCqT8RQRYdHiLevp49oV_w/viewform" // Replace with your actual Google Forms link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-white text-lg font-semibold px-6 py-3 rounded-md mt-4 transition bg-[#EF3639] hover:bg-red-600"
+              >
+                Click here
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

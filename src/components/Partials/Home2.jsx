@@ -59,15 +59,16 @@ const MovingDot = ({ initialPosition, delay, xValuesMap, yValuesMap, className }
 };
 
 export default function MovingDotsContainer() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="home bg-white w-screen h-48 mt-10  lg:h-[80vh] xl:h-[80vh] md:mt-10 flex items-center justify-center  flex-col gap-10">
+    <div className="home bg-white w-screen h-48 xl:mt-10 md:h-[80vh]  lg:h-[80vh] xl:h-[80vh] md:mt-10 lg:mt-0 flex items-center justify-center  flex-col gap-10">
 
       <div
-        className=" w-[70vw] relative border-none  z-30 top-0 md:top-8  text-[5vh] font-bold h-full md:h-[16vh] lg:w-[55vw] xl:w-[55vw] xxl:w-[75vw] flex items-center justify-center text-center "
+        className=" w-[70vw] relative border-none  z-30 top-0 md:top-8  text-[5vh] font-bold h-full md:h-[16vh] lg:w-[47vw] xl:w-[55vw] xxl:w-[75vw] flex items-center justify-center text-center "
         
       >
       <motion.span
-        className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute lg:bottom-[220%] xl:-left-[11%] lg:-left-[14.5%] text-xl"
+        className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-[220%] xl:-left-[11%] -left-[14.5%] text-xl"
         initial={{ opacity: 0.2 }} // Initially hidden
         animate={{ opacity: 1 }} // Dynamic opacity based on state
         transition={{ duration: 1, delay: 12 }}
@@ -85,7 +86,7 @@ export default function MovingDotsContainer() {
       </motion.span>
 
       <motion.span
-        className="tag-3 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-[160%] lg:left-[105%] xl:left-[110%] text-xl "
+        className="tag-3 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-[160%] left-[105%] xl:left-[110%] text-xl "
         initial={{ opacity: 0.2 }} // Initially hidden
         animate={{ opacity: 1 }} // Dynamic opacity based on state
         transition={{ duration: 1, delay: 2 }}
@@ -139,7 +140,7 @@ export default function MovingDotsContainer() {
           sm: ["100%", "-2590%", "100%"], md: ["100%", "-2590%", "100%"], lg: ["100%", "-2190%", "100%"], xl: ["100%", "-2590%", "100%"],
         }}
         // yValues={["100%", "-2590%", "100%"]}
-        className="union-7 md:block hidden w-[5px] h-[5px] bg-red-500 z-10  absolute bottom-[79%] lg:left-[56.7%] xl:left-[56.8%] mb-5"
+        className="union-7 md:block hidden w-[5px] h-[5px] bg-red-500 z-10  absolute lg:top-2 xl:bottom-[75%] left-[50%] lg:left-[56.7%] xl:left-[56.8%] mb-5"
       />
        <MovingDot
         initialPosition={{ y: "100%", x: "0%" }}
@@ -150,7 +151,7 @@ export default function MovingDotsContainer() {
           sm: ["100%", "4000%", "100%"], md: ["100%", "4000%", "100%"], lg: ["100%", "3300%", "100%"], xl: ["100%", "3750%", "100%"],
         }}
         // yValues={["100%", "4000%", "100%"]}
-        className="union-3 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute top-[89%] left-[64.8%]"
+        className="union-3 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute bottom-4 left-[70%] lg:left-[64.8%]"
       />
       
       <MovingDot
@@ -177,7 +178,7 @@ export default function MovingDotsContainer() {
           sm: ["100%", "5500%", "100%"], md: ["100%", "5500%", "100%"], lg: ["100%", "3800%", "100%"], xl: ["100%", "4350%", "100%"],
         }}
         // yValues={["100%", "5500%", "100%"]}
-        className="union-4 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute top-[89%] md:left-[16.7%] xl:left-[16.9%] mb-5"
+        className="union-4 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute bottom-0 md:left-[16.7%] xl:left-[16.9%] mb-5"
       />
       
       <MovingDot
@@ -191,7 +192,7 @@ export default function MovingDotsContainer() {
         }}
         // yValues={["100%", "5300%", "5300%", "5300%", "100%"]}
         delay={10}
-        className="union-2 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute  top-[89%] right-[11.5%] mb-5"
+        className="union-2 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute lg:top-[80%]  xl:top-[85%] right-[9%] lg:right-[11.5%] mb-5"
       />
       
       <MovingDot
@@ -205,7 +206,7 @@ export default function MovingDotsContainer() {
         }}
         // yValues={["100%", "2820%", "2820%", "2820%", "100%"]}
         delay={10}
-        className="union-5 md:block hidden w-[5px] h-[5px] bg-red-500 z-10  absolute top-[89%] md:left-[5.6%] xl:left-[2.5%] mb-5"
+        className="union-5 md:block hidden w-[5px] h-[5px] bg-red-500 z-10  absolute top-[90%] lg:top-[75%] md:left-[3.6%] xl:left-[2.5%] mb-5"
       />
 
       <MovingDot
@@ -219,13 +220,13 @@ export default function MovingDotsContainer() {
         // xValues={["0%", "0%", "-2100%", "-2100%", "0%", "0%"]}
         // yValues={["100%", "-3300%", "-3300%", "-3300%", "100%"]}
         delay={10}
-        className="union-6 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute bottom-[79%] lg:left-[8.1%] xl:left-[8.3%] mb-5"
+        className="union-6 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute bottom-[82%] lg:bottom-[70%] xl:bottom-[75%] left-3 lg:left-[8.1%] xl:left-[8.3%] mb-5"
       />
         <h1  style={{
           backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333333FF' stroke-width='2' stroke-dasharray='9.5%2c 14' stroke-dashoffset='30' stroke-linecap='square'/%3e%3c/svg%3e")`,
           backgroundRepeat: "repeat",
           backgroundSize: "100% 100%", 
-        }} className="text-[20px] bg-white  absolute z-30 w-full flex justify-center items-center h-fit py-1 md:py-7 xl:text-3xl">
+        }} className="text-[20px]   absolute z-30 w-full flex justify-center items-center h-fit py-1 md:py-3 md:px-2.5 lg:text-xl xl:text-4xl">
         <h1> Generate title flows, compare revenue records, <br /> check
         encumbrances in <span className="bg-[#EF36394D]">seconds.</span></h1>
          
@@ -240,7 +241,7 @@ export default function MovingDotsContainer() {
       </div>
       <a
         href="https://forms.gle/aieChuaKTCfeBsDG9"
-        className=" px-4 py-2 mt-5 xl:mt-24 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
+        className=" px-4 py-2 mt-4 sm:mt-0 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
       >
         Request Access
       </a>

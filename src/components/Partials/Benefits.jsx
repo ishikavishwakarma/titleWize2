@@ -9,10 +9,10 @@ const Benefits = () => {
 
   return (
     <div
-      className="h-fit lg:py-16 xl:py-20  w-full flex items-center justify-center "
+      className="h-fit lg:py-16 xl:py-20 py-10 px-5 lg:px-0 w-full flex items-center justify-center "
       ref={ref}
     >
-      <div className="flex flex-col md:flex-row w-full lg:w-[70vw] xl:w-[60vw] ">
+      <div className="flex flex-col gap-4 md:flex-row w-full lg:w-[70vw] xl:w-[60vw] ">
         {/* Left Section */}
         <motion.div
           className=" w-full lg:w-[70%] flex items-center justify-center gap-6 flex-col"
