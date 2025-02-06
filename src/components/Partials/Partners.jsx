@@ -5,7 +5,7 @@ import { FaRegCopyright } from "react-icons/fa6";
 const Partners = () => {
   return (
     <div className=" w-full h-[80vh] flex items-center justify-evenly flex-col gap-14 ">
-      <div className=" text-[4vw] sm:text-[2vw] font-semibold w-[90%] sm:w-[55vw] flex justify-between items-center px-5">
+      <div className=" text-[4vw] sm:text-[2vw] font-semibold w-[90%] lg:w-[55vw] flex justify-between items-center px-5">
         <h1 className="text-xl md:text-4xl">Partnered with </h1>
         <span>|</span>
         <img
@@ -14,15 +14,17 @@ const Partners = () => {
           alt="Partner Logo"
         />
       </div>
-      <div className=" p-4 sm:p-8 w-[90%] sm:w-[50vw] border-[1.9px] border-gray-800 flex flex-col justify-center items-center bg-white">
+      <div className=" p-4 sm:px-4 sm:py-8 w-[90%] sm:w-[50vw] border-[1.9px] border-gray-800 flex flex-col justify-center items-center bg-white">
         <h1 className="text-[20px] sm:text-[24px] font-bold text-gray-900 leading-[1.3] max-w-[800px] text-center">
           Revolutionize how you assess risks for your real estate deals.
         </h1>
 
         <div className="mt-6">
-          <button className="px-6 py-2.5 bg-[#EF4444] text-white rounded text-base font-medium hover:bg-red-600 transition-colors">
+          <a  href="https://docs.google.com/forms/d/e/1FAIpQLScWXBOILpMFZzCas7jng9_pjLztmCqT8RQRYdHiLevp49oV_w/viewform" // Replace with your actual Google Forms link
+              target="_blank"
+              rel="noopener noreferrer" className="px-6 py-2.5 bg-[#EF4444] text-white rounded text-base font-medium hover:bg-red-600 transition-colors">
             Request Access
-          </button>
+          </a>
         </div>
 
         <div className="mt-12 sm:mt-16 flex items-center gap-3">

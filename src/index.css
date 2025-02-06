@@ -6,6 +6,10 @@
   font-family: Inter;
   src: url("/Inter-VariableFont_opsz\,wght.ttf");
 }
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .main{
   font-family: "Inter";
   width: 100vw;
@@ -199,4 +203,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.pointer {
+  display: inline-block;
+  font-size: 14px; /* Reduced font size */
+  /* padding: 0.4em 5px; Adjusted padding */
+  height: fit-content; /* Reduced height */
+  position: relative;
+  text-align: center;
+  /* background: #777777; */
+  max-width: fit-content;
+  /* min-width: 5em; */
+  -webkit-clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%, 0 0);
+          clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%, 0 0);
+}
+
+.pointer .text-content {
+  display: inline-block;
+  position: relative;
+  top: -0.2em; /* Adjusted position */
+  left: 0.5em;
+  min-width: 6em;
+  min-height: 1.5em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.pointer .text-content p {
+  text-align: center;
+  line-height: 1.2; /* Improved readability */
 }

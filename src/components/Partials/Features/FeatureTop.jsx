@@ -61,12 +61,12 @@ const FeatureTop = () => {
       className="flex lg:w-full w-full px-3 xl:w-[90%] md:h-fit gap-3 flex-col md:flex-row items-center justify-evenly lg:px-1 xl:px-10 "
     >
       {/* Left Div */}
-      <div className=" h-full w-full md:w-[40%]  lg:w-[30%] flex-col md:flex-row flex items-center justify-center ">
-        <div className=" md:w-[80%] border-2  border-black p-5">
+      <div className=" h-full w-full md:w-[40%]  lg:w-[35%] flex-col md:flex-row flex items-center justify-center ">
+        <div className=" md:w-[85%] lg:w-[80%] border-2  border-black p-5">
           <h1 className="xl:text-3xl text-2xl lg:text-2xl tracking-tighter leading-tight font-semibold text-[#201B1B]">
             Generate title flows instantly.
           </h1>
-          <h3 className="text-base xl:text-lg mt-6">
+          <h3 className="lg:text-base text-sm xl:text-lg mt-6">
             Be it risk assessment for sanctioning secured loans or large-scale
             real estate projects, generate title history of lands in seconds
             with Titlewize. Get detailed, accurate, and actionable information
@@ -78,22 +78,22 @@ const FeatureTop = () => {
 
       {/* Right Div with Animation */}
       <motion.div
-        className=" flex w-full items-center justify-center h-full md:w-[60%] lg:w-[50%] xl:w-[60%]     "
+        className=" flex w-full items-center justify-center h-full md:w-[65%] lg:w-[55%] xl:w-[60%]     "
         initial={{ x: "100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
       >
         <div className="flex flex-col md:flex-row   bg-[#fafafa]  overflow-hidden">
           {/* Left Sidebar */}
-          <div className=" md:w-44 bg-[#fafafa] border-r border-gray-200">
+          <div className=" md:w-48 bg-[#fafafa] border-r border-gray-200">
             <button className="flex items-center p-5">
               <Home className="w-4 h-4 text-gray-500" />
             </button>
             <div className="">
               <div className="space-y-1">
                 <div className="bg-gray-200 relative h-8 flex items-center xl:px-4 text-sm rounded">
-                  <div className="absolute h-full w-[2px] bg-red-500 left-0"></div>
-                  New Titleflow
+                  <div className="absolute h-full w-[2px]  bg-red-500 left-0"></div>
+                  <h1 className="ml-2">New Titleflow</h1>
                 </div>
                 <button className="w-full  justify-between h-8 flex items-center md:px-4 text-sm text-gray-700 hover:bg-gray-100 rounded">
                   History
@@ -108,39 +108,52 @@ const FeatureTop = () => {
           </div>
 
           {/* Main Content */}
-          <div className="flex-1 py-5 px-2 p-2 lg:p-5 bg-white">
+          <div className="flex-1 w-full py-5 px-2 p-2 lg:p-5 bg-white">
             <div className="flex items-center justify-between mb-2">
-              <img className="md:w-20 w-full md:pl-2" src="/Titlewize_logo.png" alt="" />
+              <img
+                className="md:w-20 w-full md:pl-2"
+                src="/Titlewize_logo.png"
+                alt=""
+              />
             </div>
-
+            
             {/* Progress Steps */}
-            <div className="flex items-center h-8  mb-4 text-sm flex-wrap">
-              <span className=" text-black rounded  font-semibold  px-2 py-1 text-xs capitalize ">
-                Property details
-              </span>
-              <span className="mx-2 text-gray-400">→</span>
-              <span className=" text-black rounded  font-semibold  px-2 py-1 text-xs capitalize ">
-                Upload documents
-              </span>
-              <span className="mx-2 text-gray-400">→</span>
-              <span className=" bg-black text-white font-semibold px-2 py-1 text-xs capitalize rounded">
-                Generate Titleflow
-              </span>
+            <div className="flex items-center h-8  mt-5 mb-4 text-sm ">
+            <div className="pointer pt-1 bg-[#E5E7EB]">
+              <div className="text-content">
+                <p className=" text-black rounded  font-semibold  px-2 py-1 text-xs capitalize ">
+                  Property details
+                </p>
+              </div>
+            </div>
+            <div className="pointer pt-1 bg-[#E5E7EB]">
+              <div className="text-content">
+                <p className=" text-black rounded  font-semibold  px-2 py-1 text-xs capitalize ">
+                  Upload documents
+                </p>
+              </div>
+            </div>
+            <div className="pointer pt-1 bg-black">
+              <div className="text-content">
+                <p className="  text-white font-semibold px-2 py-1 text-xs capitalize rounded">
+                  Generate Titleflow
+                </p>
+              </div>
+            </div>
             </div>
 
             {/* View Options */}
             <div className="flex gap-4 mb-6 flex-wrap  pl-2 ">
               <div className="w-fit h-8 p-1  border rounded-full flex items-center justify-center">
-
-              <button className="px-4 py-1 bg-red-500 text-white rounded-full text-xs">
-                Brief
-              </button>
-              <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-xs">
-                Timeline
-              </button>
-              <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-xs">
-                Detailed
-              </button>
+                <button className="px-4 py-1 bg-red-500 text-white rounded-full text-xs">
+                  Brief
+                </button>
+                <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-xs">
+                  Timeline
+                </button>
+                <button className="px-4 py-1 text-gray-600 hover:bg-gray-100 rounded-full text-xs">
+                  Detailed
+                </button>
               </div>
             </div>
 
