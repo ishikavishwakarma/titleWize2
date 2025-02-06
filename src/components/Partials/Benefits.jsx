@@ -42,7 +42,7 @@ const Benefits = () => {
 
         {/* Right Section */}
         <motion.div
-          className="side-2 w-full lg:w-[50%] flex items-center justify-center"
+          className="w-full lg:w-[55%] flex items-center justify-center"
           initial={{ x: "100%", opacity: 0 }}
           animate={inView ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 1.5, ease: "easeOut" }}
