@@ -72,7 +72,7 @@ export default function Navbar() {
           to="feature-section"
           smooth={true}
           duration={1000}
-          className="block py-2 px-4 text-gray-600 hover:text-gray-900 cursor-pointer"
+          className="block py-2 px-4 text-base lg:text-lg text-gray-600 hover:text-gray-900 cursor-pointer"
         >
           Features
         </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
           to="benefit-section"
           smooth={true}
           duration={1000}
-          className="block py-2 px-4 text-gray-600 hover:text-gray-900 cursor-pointer"
+          className="block py-2 px-4 text-base lg:text-lg text-gray-600 hover:text-gray-900 cursor-pointer"
         >
           Benefits
         </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
           to="partner-section"
           smooth={true}
           duration={1000}
-          className="block py-2 px-4 text-gray-600 hover:text-gray-900 cursor-pointer"
+          className="block py-2 px-4 text-base lg:text-lg text-gray-600 hover:text-gray-900 cursor-pointer"
         >
           Partners
         </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
         </div>
       </nav>
       {/* Auth Buttons */}
-      <div className="nav-login flex items-center space-x-4 md:space-x-5">
+      <div className=" hidden md:flex items-center text-base lg:text-lg lg:gap-4 space-x-4 md:space-x-5">
         <button
           onClick={() => setIsOpen(true)}
           className="text-gray-600 hover:text-gray-900"
@@ -121,7 +121,7 @@ export default function Navbar() {
           href="https://forms.gle/aieChuaKTCfeBsDG9"
           target="_blank"
               rel="noopener noreferrer" 
-          className="nav-btn px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
+          className=" px-4 py-2  text-white bg-red-500 rounded hover:bg-red-600 transition-colors"
         >
           Request Access
         </a>

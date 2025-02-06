@@ -37,8 +37,10 @@ function LoopingAnimatedButton() {
         setXValue("550%"); // For xl screens
       } else if (window.matchMedia("(min-width: 1024px)").matches) {
         setXValue("300%"); // For lg screens
+      }else if (window.matchMedia("(min-width: 768px)").matches) {
+        setXValue("400%"); // For lg screens
       } else {
-        setXValue("250%"); // For smaller screens
+        setXValue("300%"); // For smaller screens
       }
     };
 

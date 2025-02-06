@@ -14,8 +14,8 @@ const Partners = () => {
           alt="Partner Logo"
         />
       </div>
-      <div className=" p-4 sm:px-4 sm:py-8 w-[90%] sm:w-[50vw] border-[1.9px] border-gray-800 flex flex-col justify-center items-center bg-white">
-        <h1 className="text-[20px] sm:text-[24px] font-bold text-gray-900 leading-[1.3] max-w-[800px] text-center">
+      <div className=" p-4 sm:px-4 sm:py-8 w-[90%] md:w-[70%] lg:w-[50vw] border-[1.9px] border-gray-800 flex flex-col justify-center items-center bg-white">
+        <h1 className="text-[20px] lg:text-[24px] font-bold text-gray-900 leading-[1.3] max-w-[800px] text-center">
           Revolutionize how you assess risks for your real estate deals.
         </h1>
 

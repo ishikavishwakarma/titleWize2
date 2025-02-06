@@ -341,14 +341,14 @@ export default function BallAnimation() {
             encumbrances in <span className="bg-[#EF36394D]">seconds.</span>
           </h1>
         </h1>
-        <div className="absolute md:bottom-[85%] xl:bottom-[90%] right-[91.4%]  w-[7vw] md:w-[8.9vw] xl:w-[7vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
+        <div className="absolute md:bottom-[85%] xl:bottom-[90%] lg:right-[91.4%] right-[95%]  w-[7vw] md:w-[8.9vw] xl:w-[7vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
           {/* Box Borders */}
           <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100  right-0"></div>
           <div className="w-full flex">
             <div className="absolute hidden md:block w-full z-10 h-[1px] bg-gray-100 bottom-full"></div>
 
             <motion.span
-              className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute right-full md:bottom-[87%] xl:bottom-[89%] text-xl"
+              className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute right-full md:bottom-[87%] xl:bottom-[89%] text-base lg:text-xl"
               initial={{ opacity: 0.2 }} // Initially hidden
               animate={{ opacity: 1 }} // Dynamic opacity based on state
               transition={{ duration: 1, delay: 11 }}
@@ -368,20 +368,20 @@ export default function BallAnimation() {
             transition={{
               duration: 3,
               ease: "linear",
-              times: [0, 0.4, 1],
+              times: [0, 0.6, 1],
               delay:8,
               repeat: 1, // Repeat indefinitely
               repeatType: "reverse", // Reverse the animation
             }}
           />
         </div>
-        <div className="absolute bottom-[50%] left-[99.6%]  w-[7vw] md:w-[8vw] lg:w-[8.9vw] xl:w-[10.6vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
+        <div className="absolute bottom-[50%] left-[95%] lg:left-[99.6%]  w-[7vw] md:w-[8vw] lg:w-[8.9vw] xl:w-[10.6vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
           {/* Box Borders */}
             <div className="absolute w-full hidden md:block z-10 h-[1px] bg-gray-100 top-full"></div>
           <div className="w-full flex">
           <div className="absolute w-[1px] hidden md:block z-10 h-full bg-gray-100  right-0"></div>
             <motion.span
-          className="tag-3 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-full md:left-[-10%] lg:left-[20%] xl:left-[50%] text-lg lg:text-xl "
+          className="tag-3 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-full md:left-[-10%] lg:left-[20%] xl:left-[50%] text-base lg:text-xl "
           initial={{ opacity: 0.2 }} // Initially hidden
           animate={{ opacity: 1 }} // Dynamic opacity based on state
           transition={{ duration: 1, delay: 2 }}
@@ -407,13 +407,13 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute lg:top-[85%] xl:top-[90%] lg:left-[95%] xl:left-[88.8%]  w-[7vw] md:w-[7vw] lg:w-[8.9vw] xl:w-[8vw] h-[50vh] md:h-[25vh] xl:h-[32vh]">
+        <div className="absolute md:top-[85%] lg:top-[85%] xl:top-[90%] md:left-[90%] lg:left-[95%] xl:left-[88.8%]  w-[7vw] md:w-[7vw] lg:w-[8.9vw] xl:w-[8vw] h-[50vh] md:h-[25vh] xl:h-[32vh]">
           {/* Box Borders */}
-          <div className="absolute w-[1px] hidden md:block z-10 h-full bg-red-100  left-0"></div>
+          <div className="absolute w-[1px] hidden md:block z-10 h-full bg-gray-100  left-0"></div>
           <div className="w-full flex">
             <div className="absolute w-full hidden md:block z-10 h-[1px] bg-gray-100 top-full"></div>
           <motion.span
-          className="tag-4 border-[#575757] border-[0.1px] w-36 px-2 py-1.5 left-full xl:top-[92%] top-[87%] text-[#575757] absolute text-xl"
+          className="tag-4 border-[#575757] border-[0.1px] w-28 lg:w-36 px-2 py-1.5 left-full xl:top-[91%] top-[87%] text-[#575757] absolute text-base lg:text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
           animate={{ opacity: 1 }} // Dynamic opacity based on state
           transition={{ duration: 1, delay: 11 }}
@@ -433,7 +433,7 @@ export default function BallAnimation() {
             transition={{
               duration: 3,
               ease: "linear",
-              times: [0, 0.4, 1],
+              times: [0, 0.6, 1],
               delay:8,
               repeat: 1, // Repeat indefinitely
               repeatType: "reverse", // Reverse the animation
@@ -441,13 +441,13 @@ export default function BallAnimation() {
           />
         </div>
 
-        <div className="absolute hidden md:block lg:bottom-[85%] xl:bottom-[90%] left-[57.1%] h-[50vh] md:h-[30vh] xl:h-[20vh] lg:h-[22vh]">
+        <div className="absolute hidden md:block md:bottom-[85%] xl:bottom-[90%] left-[57.1%] h-[50vh] xl:h-[20vh] md:h-[22vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full flex">
             <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100 right-0"></div>
             <motion.span
-              className="tag-1 bg-white w-32 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-full -left-16 text-xl"
+              className="tag-1 bg-white w-32 border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-full -left-16 text-base lg:text-xl"
               initial={{ opacity: 0.2 }} // Initially hidden
               animate={{ opacity: 1 }} // Dynamic opacity based on state
               transition={{ duration: 1, delay: 6 }}
@@ -471,13 +471,13 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute hidden md:block top-[80%] xl:top-[87%] left-[70%] xl:left-[65%] h-[50vh] md:h-[30vh] xl:h-[25vh] lg:h-[22vh]">
+        <div className="absolute hidden md:block top-[80%] xl:top-[87%] md:left-[70%] xl:left-[65%] h-[50vh] md:h-[22vh] xl:h-[25vh] lg:h-[22vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full hidden md:flex">
             <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100 right-0"></div>
             <motion.span
-          className="tag-5 border-[#575757] w-40 border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-full lg:-left-20 xl:-left-16 text-xl"
+          className="tag-5 border-[#575757] w-36 lg:w-40 border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-full md:-left-[4.5rem] lg:-left-20 xl:-left-[5rem] text-base lg:text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
           animate={{ opacity: 1 }} // Dynamic opacity based on state
           transition={{ duration: 1, delay: 2 }}
@@ -500,13 +500,13 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute hidden md:block top-[80%] xl:top-[87%] left-[17%] h-[50vh] md:h-[28vh]  lg:h-[27vh]">
+        <div className="absolute hidden md:block top-[80%] xl:top-[87%] md:left-[23%] lg:left-[17%] h-[50vh] md:h-[27vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full flex">
             <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100 right-0"></div>
             <motion.span
-          className="tag-5 border-[#575757] w-28 border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-full -left-16 text-xl"
+          className="tag-5 border-[#575757] w-24 lg:w-28 border-[0.1px] px-2 py-1.5 text-[#575757] absolute top-full xl:left-[-3.5rem] lg:-left-16 text-base lg:text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
           animate={{ opacity: 1 }} // Dynamic opacity based on state
           transition={{ duration: 1, delay: 6 }}
@@ -530,13 +530,13 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute lg:top-[82%] xl:top-[90%] lg:left-[-27%] xl:left-[-24%]  w-[7vw] md:w-[7vw] lg:w-[15vw] h-[50vh] md:h-[25vh] lg:h-[20vh]">
+        <div className="absolute md:top-[82%] xl:top-[90%] md:left-[-7%] lg:left-[-27%] xl:left-[-24%]  w-[7vw] md:w-[7vw] lg:w-[15vw] h-[50vh] md:h-[25vh] lg:h-[20vh]">
           {/* Box Borders */}
           <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100  right-0"></div>
           <div className="w-full flex">
             <div className="absolute hidden md:block w-full z-10 h-[1px] bg-gray-100 top-full"></div>
           <motion.span
-          className="tag-4 border-[#575757] border-[0.1px] px-2 py-1.5 right-full top-[86%] text-[#575757] absolute text-xl"
+          className="tag-4 border-[#575757] border-[0.1px] px-2 py-1.5 right-full top-[86%] text-[#575757] absolute text-base lg:text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
           animate={{ opacity: 1 }} // Dynamic opacity based on state
           transition={{ duration: 1, delay: 11 }}
@@ -556,7 +556,7 @@ export default function BallAnimation() {
             transition={{
               duration: 3,
               ease: "linear",
-              times: [0, 0.4, 1],
+              times: [0, 0.6, 1],
               delay:8,
               repeat: 1, // Repeat indefinitely
               repeatType: "reverse", // Reverse the animation
