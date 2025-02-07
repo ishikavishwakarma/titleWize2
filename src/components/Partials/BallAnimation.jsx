@@ -326,7 +326,7 @@ export default function BallAnimation() {
           delay={10}
           className="union-6 md:block hidden w-[5px] h-[5px] bg-red-500 z-10 absolute bottom-[82%] lg:bottom-[70%] xl:bottom-[75%] left-3 lg:left-[8.1%] xl:left-[8.3%] mb-5"
         /> */}
-        <h1
+        <div
           style={{
             backgroundImage: `
             repeating-linear-gradient(90deg, #000000, #000000 9px, transparent 9px, transparent 20px),
@@ -345,8 +345,8 @@ export default function BallAnimation() {
             Generate title flows, compare revenue records, <br /> check
             encumbrances in <span className="bg-[#EF36394D]">seconds.</span>
           </h1>
-        </h1>
-        <div className="absolute md:bottom-[85%] xl:bottom-[90%] lg:right-[94.4%] right-[95%]  w-[7vw] md:w-[8.9vw] xl:w-[7vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
+        </div>
+        <div className="absolute md:bottom-[85%] lg:bottom-[72%] xl:bottom-[90%] lg:right-[94.4%] right-[95%]  w-[7vw] md:w-[8.9vw] xl:w-[7vw] h-[50vh] md:h-[25vh] xl:h-[24vh]">
           {/* Box Borders */}
           <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100  right-0"></div>
           <div className="w-full flex">
@@ -412,13 +412,13 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute md:top-[85%] lg:top-[85%] xl:top-[90%] md:left-[90%] lg:left-[95%] xl:left-[88.8%]  w-[7vw] md:w-[7vw] lg:w-[8.9vw] xl:w-[8vw] h-[50vh] md:h-[25vh] xl:h-[32vh]">
+        <div className="absolute md:top-[85%] lg:top-[72%] xl:top-[90%] md:left-[90%] lg:left-[95%] xl:left-[88.8%]  w-[7vw] md:w-[7vw] lg:w-[8.9vw] xl:w-[8vw] h-[50vh] md:h-[25vh] xl:h-[32vh]">
           {/* Box Borders */}
           <div className="absolute w-[1px] hidden md:block z-10 h-full bg-gray-100  left-0"></div>
           <div className="w-full flex">
             <div className="absolute w-full hidden md:block z-10 h-[1px] bg-gray-100 top-full"></div>
           <motion.span
-          className="tag-4 border-[#575757] font-normal border-[0.1px] w-28 lg:w-36 px-2 py-1.5 left-full xl:top-[91%] top-[87%] text-[#575757] absolute text-sm lg:text-lg xl:text-xl"
+          className="tag-4 border-[#575757] font-normal border-[0.1px] w-28 lg:w-36 px-2 py-1.5 left-full xl:top-[91%] lg:top-[90%] top-[87%] text-[#575757] absolute text-sm lg:text-lg xl:text-xl"
           initial={{ opacity: 0.2 }} // Initially hidden
           animate={{ opacity: 1 }} // Dynamic opacity based on state
           transition={{ duration: 1, delay: 11 }}
@@ -446,7 +446,7 @@ export default function BallAnimation() {
           />
         </div>
 
-        <div className="absolute hidden md:block md:bottom-[85%] xl:bottom-[90%] left-[57.1%] h-[50vh] xl:h-[20vh] md:h-[22vh]">
+        <div className="absolute hidden md:block md:bottom-[85%] lg:bottom-[75%] xl:bottom-[88%] left-[57.1%] h-[50vh] xl:h-[20vh] md:h-[22vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full flex">
@@ -476,7 +476,7 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute hidden md:block top-[80%] xl:top-[87%] md:left-[70%] xl:left-[65%] h-[50vh] md:h-[22vh] xl:h-[25vh] lg:h-[22vh]">
+        <div className="absolute hidden md:block top-[80%] lg:top-[70%] xl:top-[87%] md:left-[70%] xl:left-[65%] h-[50vh] md:h-[22vh] xl:h-[25vh] lg:h-[22vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full hidden md:flex">
@@ -505,7 +505,7 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute hidden md:block top-[80%] xl:top-[87%] md:left-[23%] lg:left-[17%] h-[50vh] md:h-[27vh]">
+        <div className="absolute hidden md:block top-[80%] lg:top-[70%] xl:top-[87%] md:left-[23%] lg:left-[17%] h-[50vh] md:h-[27vh]">
           {/* Box Borders */}
           {/* <div className="absolute w-full z-10 h-[2px] bg-gray-100 top-full"></div> */}
           <div className="w-full flex">
@@ -535,7 +535,7 @@ export default function BallAnimation() {
             }}
           />
         </div>
-        <div className="absolute md:top-[82%] xl:top-[90%] md:left-[-7%] lg:left-[-27%] xl:left-[-24%]  w-[7vw] md:w-[7vw] lg:w-[15vw] h-[50vh] md:h-[25vh] lg:h-[20vh]">
+        <div className="absolute md:top-[82%] lg:top-[70%] xl:top-[90%] md:left-[-7%] lg:left-[-27%] xl:left-[-24%]  w-[7vw] md:w-[7vw] lg:w-[15vw] h-[50vh] md:h-[25vh] lg:h-[20vh]">
           {/* Box Borders */}
           <div className="absolute hidden md:block w-[1px] z-10 h-full bg-gray-100  right-0"></div>
           <div className="w-full flex">
