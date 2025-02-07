@@ -27,7 +27,7 @@ const Partners = () => {
           </a>
         </div>
 
-        <div className="mt-12 sm:mt-16 flex items-center gap-3">
+        <div className="mt-12 sm:mt-16 flex items-center gap-1 sm:gap-3">
           <p className="text-sm sm:text-base text-gray-900">
             Want to see the product in action?
           </p>
@@ -35,7 +35,7 @@ const Partners = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://cal.com/dattaprasad"
-            className="px-4 py-2 border hover:bg-black border-gray-200 rounded text-sm sm:text-base text-gray-900 hover:text-white transition-colors"
+            className="text-center py-2 px-1 sm:px-4 border w-32 sm:w-fit hover:bg-black border-gray-200 rounded text-sm md:text-sm sm:text-base text-gray-900 hover:text-white transition-colors"
           >
             Book a demo
           </a>

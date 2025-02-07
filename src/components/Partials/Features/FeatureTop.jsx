@@ -109,7 +109,7 @@ const FeatureTop = () => {
 
           {/* Main Content */}
           <div className="flex-1 w-full py-5 px-2 p-2 lg:p-5 bg-white">
-            <div className="flex items-center justify-between mb-2">
+            <div className="flex items-start justify-start mb-2">
               <img
                 className="md:w-20 w-full md:pl-2"
                 src="/Titlewize_logo.png"
@@ -158,7 +158,7 @@ const FeatureTop = () => {
             </div>
 
             {/* Table */}
-            <div className="bg-white  rounded-lg scale-90 shadow-sm overflow-auto">
+            <div className="bg-white  rounded-lg scale-95 md:scale-90 shadow-sm overflow-auto">
               <table className="w-full text-sm border">
                 <thead>
                   <tr className="border-b bg-gray-100">
@@ -185,7 +185,7 @@ const FeatureTop = () => {
                         index === transactions.length - 1 && "border-b-0"
                       )}
                     >
-                      <td className="p-2 text-center">{transaction.date}</td>
+                      <td className="p-2 text-start">{transaction.date}</td>
                       <td className="p-2 text-center">
                         {transaction.firstParty}
                       </td>
@@ -195,7 +195,7 @@ const FeatureTop = () => {
                       <td className="p-2 text-center">
                         <div className="flex flex-col text-center">
                           <span>{transaction.nature}</span>
-                          <span className="text-xs text-gray-500">
+                          <span className="text-xs  text-gray-500">
                             {transaction.reference}
                           </span>
                         </div>

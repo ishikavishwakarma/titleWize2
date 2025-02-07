@@ -115,7 +115,7 @@ const FeatureBottom = () => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             >
               <IoIosAlert className="w-6 h-6 text-red-500 flex-shrink-0" />
-              <p className="xl:text-base text-xs lg:text-sm lg:leading-relaxed text-gray-900">
+              <p className="xl:text-base text-xs lg:text-sm leading-tight lg:leading-relaxed text-gray-900">
                 The EC does not reflect Sale Deed bearing Document No.
                 KRI-1-005177-2020-21.
               </p>
@@ -128,7 +128,7 @@ const FeatureBottom = () => {
               transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
                             <IoIosAlert className="w-6 h-6 text-red-500 flex-shrink-0" />
-              <p className="xl:text-base text-xs lg:text-sm lg:leading-relaxed text-gray-900">
+              <p className="xl:text-base text-xs lg:text-sm leading-tight lg:leading-relaxed text-gray-900">
                 There's a break in the chain of title between Paul D'Souza
                 (owner vide Sale Deed bearing Document No. MDP-1-010408-2011-12)
                 and Roy D'Mello (seller vide Sale Deed bearing Document No.
