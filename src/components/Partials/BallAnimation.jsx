@@ -54,9 +54,8 @@ const MovingDot = ({
 };
 
 export default function BallAnimation() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="home bg-white w-screen h-48 xl:mt-10 md:h-[70vh] lg:h-[80vh] xl:h-[80vh] mt-10 lg:mt-0 flex items-center justify-center  flex-col gap-10">
+    <div className="home bg-white w-screen h-48 xl:mt-10 md:h-[70vh] lg:h-[80vh] xl:h-[75vh] mt-10 lg:mt-0 flex items-center justify-center  flex-col gap-10">
       <div className=" w-[70vw] relative border-none  z-30 top-0 md:top-8  text-[5vh] font-bold h-full md:h-[16vh] md:w-[65vw] lg:w-[48vw] xl:w-[860px] xxl:w-[75vw] flex items-center justify-center text-center ">
         {/* <motion.span
           className="tag-1 bg-white  border-[#575757] border-[0.1px] px-2 py-1.5 text-[#575757] absolute bottom-[220%] xl:-left-[11%] lg:-left-[20%] -left-[14.5%] text-xl"
@@ -329,9 +328,15 @@ export default function BallAnimation() {
         /> */}
         <h1
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333333FF' stroke-width='2' stroke-dasharray='9.5%2c 14' stroke-dashoffset='30' stroke-linecap='square'/%3e%3c/svg%3e")`,
-            backgroundRepeat: "repeat",
-            backgroundSize: "100% 100%",
+            backgroundImage: `
+            repeating-linear-gradient(90deg, #000000, #000000 9px, transparent 9px, transparent 20px),
+            repeating-linear-gradient(180deg, #000000, #000000 9px, transparent 9px, transparent 20px),
+            repeating-linear-gradient(90deg, #000000, #000000 9px, transparent 9px, transparent 20px),
+            repeating-linear-gradient(180deg, #000000, #000000 9px, transparent 9px, transparent 20px)
+          `,
+          backgroundPosition: "left top, right top, left bottom, left top",
+          backgroundRepeat: "repeat-x, repeat-y, repeat-x, repeat-y",
+          backgroundSize: "100% 1.4px, 1.4px 100%, 100% 1.4px, 1.4px 100%",
           }}
           className="text-[20px] bg-white  absolute z-30 w-full flex justify-center items-center h-fit py-1 md:py-3 md:px-2.5 lg:text-xl xl:text-4xl"
         >
