@@ -212,7 +212,7 @@ body {
   position: relative;
   text-align: center;
   /* background: #777777; */
-  max-width: fit-content;
+  /* max-width: 100%; */
   /* min-width: 5em; */
   -webkit-clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%, 0 0);
           clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%, 0 0);
@@ -225,7 +225,7 @@ body {
   left: 0.5em;
   min-width: 6em;
   min-height: 1.5em;
-  margin-right: 0.5em;
+  margin-right: 0.6em;
   vertical-align: middle;
   color: #ffffff;
 }
