@@ -13,7 +13,7 @@ const FeatureBottom = () => {
         <div className="p-5 border-2  h-full border-black flex flex-col items-center justify-center ">
           <p className="lg:text-[26px] text-lg font-bold ">
             Convert title flows into flow charts for easier understanding.
-          </p> 
+          </p>
           <br />
           <img
             src="/Frame 236.png"
@@ -21,15 +21,16 @@ const FeatureBottom = () => {
             alt="Feature illustration"
           />
         </div>
-        <div className="w-full flex flex-col items-start mt-0 md:mt-10 py-10 justify-center gap-4">
-            
-          <img
-            src="Law.png"
-            className=""
-            alt="Law icon"
-          />
-          <h1 className="text-4xl md:text-4xl lg:text-7xl font-semibold leading-tight">
-            Designed by real estate lawyers
+        <div className="w-full flex flex-col items-start mt-0 md:mt-10 py-10 justify-center gap-4 md:gap-0">
+          <div className="flex md:flex-col md:items-start md:gap-0 gap-4 items-end">
+
+          <img src="Law.png" className="" alt="Law icon" />
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
+            Designed by 
+          </h1>
+          </div>
+          <h1 className="text-3xl sm:4xl md:text-4xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
+          real estate lawyers
           </h1>
         </div>
       </div>
@@ -60,8 +61,12 @@ const FeatureBottom = () => {
                     <br />
                     2006-07
                   </td>
-                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">Present</td>
-                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">Present</td>
+                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">
+                    Present
+                  </td>
+                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">
+                    Present
+                  </td>
                 </tr>
                 <tr>
                   <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">
@@ -69,8 +74,12 @@ const FeatureBottom = () => {
                     <br />
                     2017-18
                   </td>
-                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">Present</td>
-                  <td className="xl:px-4 md:px-2 px-4 py-3 text-sm md:text-xs lg:text-sm">Present</td>
+                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">
+                    Present
+                  </td>
+                  <td className="xl:px-4 md:px-2 px-4 py-3 text-sm md:text-xs lg:text-sm">
+                    Present
+                  </td>
                 </tr>
                 <tr>
                   <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm">
@@ -78,8 +87,12 @@ const FeatureBottom = () => {
                     <br />
                     2021-22
                   </td>
-                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm text-red-500">Not found</td>
-                  <td className="xl:px-4 md:px-2 px-4 py-3 text-sm md:text-xs lg:text-sm">Present</td>
+                  <td className="xl:px-4 md:px-2 px-4 py-3 md:py-1 lg:py-3 text-sm md:text-xs lg:text-sm text-red-500">
+                    Not found
+                  </td>
+                  <td className="xl:px-4 md:px-2 px-4 py-3 text-sm md:text-xs lg:text-sm">
+                    Present
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -106,7 +119,10 @@ const FeatureBottom = () => {
             record discrepancies—protecting your investments from costly
             disputes.
           </p>
-          <div ref={ref} className="lg:mt-6 mt-4 p-2 lg:p-4 xl:p-6 border-2 border-black rounded-md space-y-4">
+          <div
+            ref={ref}
+            className="lg:mt-6 mt-4 p-2 lg:p-4 xl:p-6 border-2 border-black rounded-md space-y-4"
+          >
             {/* Card 1 */}
             <motion.div
               className="card flex  items-center gap-3 p-4 md:p-2.5 lg:p-2 xl:p-4 bg-[#EF363626] rounded-lg border border-[#B02527]"
@@ -127,11 +143,11 @@ const FeatureBottom = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
-                            <IoIosAlert className="w-6 h-6 text-red-500 flex-shrink-0" />
+              <IoIosAlert className="w-6 h-6 text-red-500 flex-shrink-0" />
               <p className="xl:text-base text-xs lg:text-sm leading-tight lg:leading-relaxed text-gray-900">
-                There's a break in the chain of title between Paul D'Souza
+                There&apos;s a break in the chain of title between Paul D&apos;Souza
                 (owner vide Sale Deed bearing Document No. MDP-1-010408-2011-12)
-                and Roy D'Mello (seller vide Sale Deed bearing Document No.
+                and Roy D&apos;Mello (seller vide Sale Deed bearing Document No.
                 GAN-1-11009-2015-16).
               </p>
             </motion.div>
