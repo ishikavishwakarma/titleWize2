@@ -9,8 +9,8 @@ const FeatureBottom = () => {
   return (
     <div className="flex w-full mt-10 lg:mt-20 gap-3 xl:w-[90%] flex-col md:flex-row px-5 lg:px-20 xl:px-28 justify-evenly ">
       {/* Left Section */}
-      <div className="xl:w-[40%] md:w-[55%] lg:w-[50%] w-full   flex flex-col items-center justify-center ">
-        <div className="p-5 border-2  h-full border-black flex flex-col items-center justify-center ">
+      <div className="xl:w-[40%]  md:w-[55%] lg:w-[50%] w-full   flex flex-col items-center justify-center ">
+        <div className="p-5 border-2 bg  h-full border-black flex flex-col items-center justify-center ">
           <p className="lg:text-[26px] text-lg font-bold ">
             Convert title flows into flow charts for easier understanding.
           </p>

@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Partners.css";
 import { FaRegCopyright } from "react-icons/fa6";
 
 const Partners = () => {
@@ -42,7 +41,7 @@ const Partners = () => {
         </div>
       </div>
 
-      <div className="footer w-full flex justify-between items-center p-6  text-[0.9vw] text-[#575757]">
+      <div className="footer text-[10px] md:text-xs w-full flex justify-between items-center p-6  text-[#575757]">
         <h5 className="flex md:text-base items-center gap-1">
           <FaRegCopyright />
           Litigrit Technologies Pvt. Ltd. All right reserved.
