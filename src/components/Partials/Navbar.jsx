@@ -66,7 +66,7 @@ export default function Navbar() {
       <nav
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } md:flex md:items-center  items-center z-50 gap-10 md:gap-1 lg:gap-10 md:w-[45%] md:static fixed top-16 left-0 w-full lg:w-fit bg-white shadow-md md:shadow-none md:bg-transparent text-lg`}
+        } md:flex md:items-center ease-in-out items-center z-50 gap-10 md:gap-1 lg:gap-10 md:w-[45%] md:static fixed top-16 left-0 w-full lg:w-fit bg-white shadow-md md:shadow-none md:bg-transparent text-lg`}
       >
         <Link
           to="feature-section"
