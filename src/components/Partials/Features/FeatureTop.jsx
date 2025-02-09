@@ -61,8 +61,8 @@ const FeatureTop = () => {
       className="flex lg:w-full w-full px-1 xl:w-[90%] md:h-fit gap-3 flex-col md:flex-row items-center justify-evenly lg:px-1 xl:px-10 "
     >
       {/* Left Div */}
-      <div className=" h-full w-full md:w-[40%]  lg:w-[35%] flex-col md:flex-row flex items-center justify-center ">
-        <div className=" md:w-[85%] lg:w-[80%] border-2  border-black p-5">
+      <div className=" h-full w-full  md:w-[40%]  lg:w-[35%] flex-col md:flex-row flex items-center justify-center ">
+        <div className=" md:w-[85%] lg:w-[80%] border-2 bg-white border-black p-5">
           <h1 className="xl:text-3xl text-2xl lg:text-2xl tracking-tighter leading-tight font-semibold text-[#201B1B]">
             Generate title flows instantly.
           </h1>
